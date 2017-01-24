@@ -63,8 +63,6 @@
         watch: {
             '$route' (to, from) {
               this.getPage();
-              console.log('to' + to);
-              console.log('from   ' + from);
             }
         },
 
