@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'CMS',
+    'name' => 'Chitwon',
 
     /*
     |--------------------------------------------------------------------------
@@ -169,7 +169,7 @@ return [
          */
 
         //Laravel Passport for Api Authetication
-        Laravel\Passport\PassportServiceProvider::class,
+        //Laravel\Passport\PassportServiceProvider::class,
         //Media Library
         Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
         //Fractal For Data Normalization

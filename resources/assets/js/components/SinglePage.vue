@@ -10,13 +10,10 @@
                     <p>{{page.description}}</p>
 
                     <div class="panel-body">
-
-
-
-
                         <!--Image Gallery-->
-                        <child-posts v-bind:posts="page.posts" title="1"></child-posts>
-<!--
+
+                        <!--<child-posts v-bind:posts="posts.data" :title="1"></child-posts>-->
+
                         <div v-for="image in page.media" v-show="Object.keys(page.media).length">
 
                             <ul v-show="Object.keys(image).length">
@@ -27,7 +24,7 @@
 
                             </ul>
                         </div>
--->
+
 
 
                     </div>
@@ -45,6 +42,7 @@
         data() {
             return {
                 page: [],
+                posts:[]
 
             };
         },
@@ -62,6 +60,13 @@
         mounted() {
             this.prepareComponent();
         },
+        watch: {
+            '$route' (to, from) {
+              this.getPage();
+              console.log('to' + to);
+              console.log('from   ' + from);
+            }
+        },
 
         methods: {
             /**
@@ -78,6 +83,8 @@
                 this.$http.get('/api/v1/pages/'+ this.$route.params.id +'?include=media,posts')
                         .then(response => {
                             this.page = response.data.data;
+                            this.posts = response.data.data.posts;
+
 
                         });
             },

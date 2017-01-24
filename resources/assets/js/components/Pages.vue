@@ -1,6 +1,4 @@
 <template>
-
-
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -11,21 +9,15 @@
 
                         <ul v-for="page in pages">
 
-                                <div v-show="Object.keys(page.posts).length" class="row">
-                                    <child-posts v-bind:posts="page.posts"></child-posts>
-                                </div>
+                            <div v-show="Object.keys(page.posts).length" class="row">
+                               <!-- <child-posts v-bind:posts="page.posts"></child-posts>-->
+                            </div>
+                            <ul v-show="page.media !== undefined && Object.keys(pst.media.data).length">
+                                <li v-for="src in pst.media.data">
+                                    <img :src="'http://localhost:8000/storage' + src.thumb" class="image img img-responsive ">
+                                </li>
 
-
-                                <ul v-show="page.media !== undefined && Object.keys(pst.media.data).length">
-                                    <li v-for="src in pst.media.data">
-                                        <img :src="'http://localhost:8000/storage' + src.thumb" class="image img img-responsive ">
-                                    </li>
-
-                                </ul>
-
-
-
-
+                            </ul>
                         </ul>
                     </div>
                 </div>

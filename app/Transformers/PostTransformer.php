@@ -17,6 +17,7 @@ class PostTransformer extends Fractal\TransformerAbstract
             'id' => (int)$post->id,
             'title' => $post->title,
             'description' => $post->description,
+            'excerpt' => $post->excerpt,
             'published_on' => $post->published_on,
             'links' => [
                 'rel' => 'self',

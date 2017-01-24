@@ -1,8 +1,8 @@
 <template>
     <div class="container">
-        <h3 v-show="title">Posts</h3>
-        <ul v-show="Object.keys(posts).length" v-for="nPost in posts">
-            <li v-for="pst in nPost">
+        <h3>Posts</h3>
+        <ul >
+            <li v-for="pst in posts">
                 <h4>{{ pst.title }}</h4>
                 <p>{{ pst.excerpt }}</p>
             </li>
@@ -29,6 +29,9 @@
         },
 
         data(){
+        return {
+
+            }
 
         },
 
@@ -36,28 +39,22 @@
          * Prepare the component (Vue 1.x).
          */
         ready() {
-
-            console.log('ready');
             this.prepareComponent();
-            console.log(this.posts);
         },
 
         /**
          * Prepare the component (Vue 2.x).
          */
         mounted() {
-
             this.prepareComponent();
-            console.log('mounted post'+this.post);
         },
         methods:{
              prepareComponent() {
-
-                console.log('preparing component');
+                   this.getPost()
             },
             getPost(){
                 this.post = this.posts;
-                console.log(this.title);
+
             }
         }
 
