@@ -12,12 +12,19 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/{vue_capture?}', function () {
+            return view('welcome');
+        })->where('vue_capture', '[\/\w\.-]*');
 
 Auth::routes();
 
+Route::group(['middleware' => 'auth'], function () {
+    Route::group(['prefix' => 'dashboard'], function () {
+        Route::get('/{vue_capture?}', function () {
+            return view('home');
+        })->where('vue_capture', '[\/\w\.-]*');
+    });
+});
 Route::get('/home', 'HomeController@index');
 
 /*
