@@ -12,6 +12,12 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
+    <link rel="stylesheet" href="/frontend/stylesheets/font-awesome.css">
+    <link rel="stylesheet" href="/frontend/stylesheets/themify-icons.css">
+    <link rel="stylesheet" href="/frontend/stylesheets/animate.css">
+    <link rel="stylesheet" href="/frontend/stylesheets/animateSlider.css">
+    <link href="/frontend/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
     <!-- Scripts -->
     <script>
@@ -22,74 +28,65 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
+        {{-- <div class="loading">
+            <h1>Loading</h1>
+        </div> --}}
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+        <header class="page-header">
+            <div class="top-nav">
+              
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><router-link to="/upload">Upload</router-link></li>
-                        <li><router-link to="/passport">Passport</router-link></li>
-                        <li><router-link to="/pages/">Pages</router-link></li>
-                        <li><router-link to="/pages/1/">First Page</router-link></li>
-                        <li><router-link to="/pages/2/">Example</router-link></li>
-
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ url('/logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
-                    </ul>
-                </div>
+                <div class="wrap clearfix">
+                    <div class="logo">
+                        <img src="frontend/images/logo.png" alt="">
+                    </div>
+                    
+<!--                     <contact-info></contact-info>   
+                 -->                </div>
             </div>
-        </nav>
+            <div class="bottom-nav">
+                <div class="wrap clearfix">
+                    <div class="social-icons">
+                        <social-icons></social-icons>   
+                   </div>
+                    <div class="site-menu">
+                       <site-menu></site-menu>
+                    </div>
+                </div>
+            </div>  
+        </header>
 
         @yield('content')
+
+        <footer class="page-footer">
+            <div class="wrap">
+                <div class="social-icons">
+                    <social-icons></social-icons>               
+                </div>
+                <div class="contact-info">
+                    <contact-info></contact-info>               
+                </div>
+                <div class="copyright">
+                    <copyright></copyright>
+                </div>
+            </div>
+        </footer>
 
         
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+    
+ <!--   <script src="/frontend/js/jquery.mixitup.js"></script>
+ <script src="/frontend/js/pace.js"></script>
+ <script src="/frontend/js/textillate.js"></script>
+ <script src="/frontend/js/animateSlider.js"></script>
+ <script src="/frontend/js/modernizr.js"></script>  -->
+{{--    <script src="/frontend/js/new.js" async defer></script>
+   <script src="/frontend/js/custom.js" async defer></script> --> --}}
+
+    <script src="/js/app.js"></script> 
+   {{-- <script src="/frontend/js/components.js" async defer></script> --}}
 </body>
 </html>
+ 
