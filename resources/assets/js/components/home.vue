@@ -1,7 +1,9 @@
 <template>
-	<package></package>
-	<!-- <banner-slider></banner-slider> -->
-	<!-- <intro></intro> -->
+	<div id="main-content" class="home-page">
+		<banner-slider></banner-slider>
+		<package></package>
+		<intro></intro>
+	</div>
 </template>
 
 <script>
@@ -11,12 +13,7 @@ import Package from './package.vue';
 
 	export default{
 		components:{
-			Package
-		},
-		data:function(){
-			return {
-				data: []
-			}
+			Package, Intro, Slider
 		}
 	}
 </script>
