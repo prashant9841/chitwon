@@ -20,16 +20,18 @@ Vue.http.interceptors.push((request, next) => {
 const Pages = Vue.component('pages',require('./components/Pages.vue'));
 
 const InnerPage = Vue.component('single-page',require('./components/SinglePage.vue'));
+const Image = Vue.component('image-gallery',require('./components/Image.vue'));
 const Example = Vue.component('example', require('./components/Example.vue'));
 const Post = Vue.component('child-posts', require('./components/ChildPosts.vue'));
 const AllPosts = Vue.component('posts', require('./components/Posts.vue'));
 const IndividualPosts = Vue.component('individual-posts', require('./components/IndividualPost.vue'));
 
 const router = new VueRouter({
+    mode: 'history',
     routes: [
         // dynamic segments start with a colon
         { path: '/example', component:Example},
-        //{path:'/pages',component: Pages},
+        {path:'/pages',component: Pages},
         { path: '/pages/:id', component: InnerPage,
         children: [
             {

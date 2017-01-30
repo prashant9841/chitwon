@@ -1,11 +1,10 @@
 <template>
-    <div>
-
+    <div class="row">
       <child-posts v-bind:posts="posts"></child-posts>
     </div>
 </template>
 
-<style>
+<style scoped>
     body{
         background-color:#ff0000;
     }

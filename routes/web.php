@@ -12,35 +12,35 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
-
-/*
- * OAUTH Token Callback
- * Route::get('callback', function (Illuminate\Http\Request $request) {
-    $http = new GuzzleHttp\Client;
-
-    $response = $http->post('/oauth/token', [
-        'form_params' => [
-            'grant_type' => 'authorization_code',
-            'client_id' => 'client-id',
-            'client_secret' => 'client-secret',
-            'redirect_uri' => '/callback',
-            'code' => ($request->code)? $request->code : dd($request->toArray()),
-        ],
-    ]);
-
-    return json_decode((string) $response->getBody(), true);
-});*/
-
-Route::get('/test',function(){
-	return view('upload');
+Route::get('/logout',function(){
+    Auth::logout();
 });
+//From SUggestion Matt Staufer
+//Route::group([], function () {
+
+    Route::group(['prefix' => 'dashboard'], function () {
+        Route::get('/{vue_capture?}', function () {
+            return view('home');
+        })->where('vue_capture', '(.*)');
+    });
+
+    //[\/\w\.-]*
+//});
+Route::get('/test', ['middleware' => 'guest', function () {
+    return view('welcome');
+}]);
+
+Route::get('/{catchall?}', function () {
+    return response()->view('welcome');
+})->where('catchall', '(.*)');
+
+
 Route::post('upload',function(Request $request){
 	$page = \App\Page::findOrFail(1);
 	
@@ -48,7 +48,4 @@ Route::post('upload',function(Request $request){
 		return redirect('/');
 	}
 	//echo "HEL";
-});
-Route::get('/admin',function(){
-	return view('admin.passport');
 });

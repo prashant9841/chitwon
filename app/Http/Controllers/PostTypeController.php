@@ -6,5 +6,6 @@ use Illuminate\Http\Request;
 
 class PostTypeController extends Controller
 {
-    //
+
+
 }

@@ -169,7 +169,7 @@ return [
          */
 
         //Laravel Passport for Api Authetication
-        //Laravel\Passport\PassportServiceProvider::class,
+        Laravel\Passport\PassportServiceProvider::class,
         //Media Library
         Spatie\MediaLibrary\MediaLibraryServiceProvider::class,
         //Fractal For Data Normalization
