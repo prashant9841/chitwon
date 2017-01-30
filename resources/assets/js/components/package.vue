@@ -10,7 +10,7 @@
    			</div>	 
 			<div class="package-wrap">
 					    <el-row type="flex" class="row-bg" justify="center">
-						    <el-col :span="6" li v-for="(image,key) in gallery1" >
+						    <el-col :xs="12" :sm="6" :md="4" :lg="3" li v-for="(image,key) in gallery1" >
 							    <a :href="image.link">
 							    	<svg class="clip-svg">
 									  <defs>

@@ -51,6 +51,7 @@ const contactInfo = Vue.component('contact-info', require('./components/contactI
 const Home = Vue.component('home', require('./components/home.vue'));
 
 const router = new VueRouter({
+    history: true,
     routes: [
         // dynamic segments start with a colon
         { path: '/', component:Home},

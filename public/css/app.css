@@ -270,8 +270,14 @@ a:hover {
   background: #fff;
 }
 
+section.banner .el-carousel {
+  width: 100vw;
+}
+
 section.banner .el-carousel .el-carousel__container {
   height: 80vh;
+  width: 100%;
+  overflow: hidden;
 }
 
 section.banner .el-carousel .el-carousel__item .bg-image {
@@ -330,12 +336,24 @@ section.intro h3 {
   color: #1c6804;
 }
 
+@media screen and (max-width: 640px) {
+  section.intro h3 {
+    margin: 65px 0;
+  }
+}
+
 section.intro p {
   text-align: center;
   width: 70%;
   margin: auto;
   font-size: 17px;
   line-height: 24px;
+}
+
+@media screen and (max-width: 640px) {
+  section.intro p {
+    width: 100%;
+  }
 }
 
 section.gallery {
@@ -389,6 +407,16 @@ section.gallery .section-title h1, section.gallery .section-title p {
   border-radius: 5px;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+
+@media screen and (max-width: 640px) {
+  section.gallery .section-title h1, section.gallery .section-title p {
+    left: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    width: 80%;
+    text-align: center;
+  }
 }
 
 section.gallery .package-wrap {
@@ -446,11 +474,42 @@ section.gallery .package-wrap .el-col h4:hover {
   background: transparent;
 }
 
+@media only screen and (max-device-width: 768px) and (orientation: portrait) {
+  section.gallery .package-wrap .el-row--flex:nth-child(odd) .el-col:nth-child(4) {
+    display: none;
+  }
+  section.gallery .package-wrap .el-row--flex:nth-child(even) .el-col:nth-child(3) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  section.gallery .package-wrap .el-row--flex:nth-child(odd) .el-col:nth-child(3) {
+    display: none;
+  }
+  section.gallery .package-wrap .el-row--flex:nth-child(odd) .el-col:nth-child(4) {
+    display: none;
+  }
+  section.gallery .package-wrap .el-row--flex:nth-child(even) .el-col:nth-child(2) {
+    display: none;
+  }
+  section.gallery .package-wrap .el-row--flex:nth-child(even) .el-col:nth-child(3) {
+    display: none;
+  }
+}
+
 section.facts {
   min-height: 120vh;
   background: url("../images/img16.jpg");
   background-position: center;
   position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 640px) {
+  section.facts {
+    min-height: 160vh;
+  }
 }
 
 section.facts .overlay-wrap {
@@ -489,9 +548,22 @@ section.facts h1 img {
   top: 200px;
 }
 
+@media screen and (max-width: 640px) {
+  section.facts h1 img {
+    top: 270px;
+  }
+}
+
 section.facts ul.facts-wrap {
   position: relative;
   padding-top: 100px;
+  padding-left: 0;
+}
+
+@media screen and (max-width: 640px) {
+  section.facts ul.facts-wrap {
+    padding-top: 160px;
+  }
 }
 
 section.facts ul.facts-wrap li {
@@ -521,6 +593,25 @@ section.facts ul.facts-wrap li:nth-child(1) {
   text-align: center;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+
+@media only screen and (max-device-width: 768px) and (orientation: portrait) {
+  section.facts ul.facts-wrap li:nth-child(1) {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-device-width: 768px) and (orientation: portrait) {
+  section.facts ul.facts-wrap li {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  section.facts ul.facts-wrap li {
+    width: 100% !important;
+    text-align: center !important;
+  }
 }
 
 section.testimonials {
@@ -589,6 +680,12 @@ section.testimonials .el-carousel .text-wrap h4, section.testimonials .el-carous
 section.testimonials .el-carousel .text-wrap p {
   width: 40%;
   margin: 20px auto 0;
+}
+
+@media screen and (max-width: 640px) {
+  section.testimonials .el-carousel .text-wrap p {
+    width: 100%;
+  }
 }
 
 section.testimonials .el-carousel .text-wrap.title h4, section.testimonials .el-carousel .text-wrap.title p {
@@ -672,11 +769,24 @@ footer.page-footer .contact-info li:first-child {
   font-size: 26px;
 }
 
+@media screen and (max-width: 640px) {
+  footer.page-footer .contact-info li:first-child {
+    width: 100%;
+    margin: 0;
+  }
+}
+
 footer.page-footer .copyright p {
   width: 60%;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 25px;
+}
+
+@media screen and (max-width: 640px) {
+  footer.page-footer .copyright p {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

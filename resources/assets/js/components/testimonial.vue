@@ -1,20 +1,28 @@
 <template>
 	<section class="testimonials">
-		<el-carousel trigger="click" >
-	      <el-carousel-item v-for="testimonial in testimonials" >
-	        	<div class="1 img-div banner-content">
-	             <img :src="testimonial.image" alt="" />
-	            </div>
-	            <div class="2 banner-content title text-wrap">
-	                <h4>{{testimonial.title}} </h4>
-	                <p>{{testimonial.position}}</p>
-	            </div>
-	            <div class="3 banner-content text-wrap">
-	                <p>{{testimonial.description}}</p>
-	            </div>
-	      </el-carousel-item>
-	    </el-carousel>
-	</section>
+   		<div class="wrap">
+   			<div class="section-title">
+		   		<h1>Feedback from our guests</h1>
+		   		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+   				
+   			</div>
+   			
+	   		<el-carousel trigger="click" >
+		      <el-carousel-item v-for="testimonial in testimonials" >
+		        	<div class="1 img-div banner-content">
+		             <img :src="testimonial.image" alt="" />
+		            </div>
+		            <div class="2 banner-content title text-wrap">
+		                <h4>{{testimonial.title}} </h4>
+		                <p>{{testimonial.position}}</p>
+		            </div>
+		            <div class="3 banner-content text-wrap">
+		                <p>{{testimonial.description}}</p>
+		            </div>
+		      </el-carousel-item>
+		    </el-carousel>
+   		</div>
+   	</section>
 </template>
 	    	
 <script>

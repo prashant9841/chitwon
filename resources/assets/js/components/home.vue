@@ -1,8 +1,10 @@
 <template>
 	<div id="main-content" class="home-page">
 		<banner-slider></banner-slider>
-		<package></package>
 		<intro></intro>
+		<package></package>
+		<facts></facts>	
+		<testimonial></testimonial>
 	</div>
 </template>
 
@@ -10,10 +12,12 @@
 import Slider from './bannerSlider.vue';
 import Intro from './intro.vue';
 import Package from './package.vue';
+import Facts from './facts.vue';
+import Testimonial from './testimonial.vue';
 
 	export default{
 		components:{
-			Package, Intro, Slider
+			Package, Intro, Slider, Facts, Testimonial
 		}
 	}
 </script>
