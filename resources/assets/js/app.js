@@ -45,6 +45,7 @@ const Package = Vue.component('package', require('./components/package.vue'));
 const Facts = Vue.component('facts', require('./components/facts.vue'));
 const Blog = Vue.component('blog', require('./components/blog.vue'));
 const Intro = Vue.component('intro', require('./components/intro.vue'));
+const About = Vue.component('about', require('./components/about.vue'));
 const Testimonial = Vue.component('testimonial', require('./components/testimonial.vue'));
 const contactInfo = Vue.component('contact-info', require('./components/contactInfo.vue'));
 /*
@@ -69,6 +70,9 @@ const router = new VueRouter({
         //{path:'/pages',component: Pages},
         { path: '/facts', component: Facts},
         { path: '/about', component: Intro},
+
+        { path:'/testimonial',component:Testimonial},
+
         { path: '/blog', component: Blog},
         {path:'/testimonial',component:Testimonial},
         { path: '/package', component: Package },
