@@ -2,7 +2,7 @@
 	<div id="main-content" class="home-page">
 		<banner-slider></banner-slider>
 		<intro></intro>
-		<package description="Niggendra was here" title=1 :packages="packages"></package>
+		<package :description="description" title=1 :packages="packages"></package>
 		<facts></facts>	
 		<testimonial></testimonial>
 	</div>
@@ -21,6 +21,7 @@ import Testimonial from './testimonial.vue';
 		},
 		data(){
 			return {
+				description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat mollitia doloribus eos, voluptatum dicta assumenda laudantium. Consectetur atque ducimus perspiciatis, minus enim et vero, repellendus!',
 				packages:{
 					gallery1: [
 						{ title: 'twitter', link: 'index.php', image: 'frontend/images/img1.jpg'},
