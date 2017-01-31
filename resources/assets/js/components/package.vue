@@ -51,6 +51,7 @@
 	     		required: true,
 	     	}
 	    },
+	    
 		methods: {
 
 	      handleSelect(key, keyPath) {
