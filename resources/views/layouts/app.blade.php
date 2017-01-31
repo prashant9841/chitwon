@@ -33,13 +33,13 @@
         </div> --}}
 
         <header class="page-header">
+            <div class="logo">
+                <img src="frontend/images/logo.png" alt="">
+            </div>
             <div class="top-nav">
               
 
                 <div class="wrap clearfix">
-                    <div class="logo">
-                        <img src="frontend/images/logo.png" alt="">
-                    </div>
                     
                     <contact-info></contact-info>   
                 </div>

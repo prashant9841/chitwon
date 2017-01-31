@@ -1,10 +1,19 @@
  <template>
- 	
-	<ul class="facts-wrap">
-		<li v-for="fact in facts">
-    		<a :href="fact.link"><p>{{fact.description}}</p></a>
-		</li>
-	</ul>
+ 	<section class="facts">
+   		<div class="overlay-wrap">
+   			
+   		</div>
+   		<div class="wrap">
+   			<h1>Facts about <span>chitwan national park</span>
+   			<img src="images/leaves.png" alt=""></h1>
+   			<ul class="facts-wrap">
+				<li v-for="fact in facts">
+		    		<a :href="fact.link"><p>{{fact.description}}</p></a>
+				</li>
+			</ul>
+   		</div>
+   	</section>
+	
  </template>
   	<script>
   		export default{
