@@ -32,6 +32,9 @@ const Copyright = Vue.component('copyright', {
 const Pages = Vue.component('pages',require('./components/Pages.vue'));
 
 const InnerPage = Vue.component('single-page',require('./components/SinglePage.vue'));
+
+const Image = Vue.component('image-gallery',require('./components/Image.vue'));
+
 const Post = Vue.component('child-posts', require('./components/ChildPosts.vue'));
 const AllPosts = Vue.component('posts', require('./components/Posts.vue'));
 const IndividualPosts = Vue.component('individual-posts', require('./components/IndividualPost.vue'));
@@ -51,14 +54,19 @@ const contactInfo = Vue.component('contact-info', require('./components/contactI
 const Home = Vue.component('home', require('./components/home.vue'));
 
 const router = new VueRouter({
+    mode: 'history',
     routes: [
         // dynamic segments start with a colon
+
+        { path: '/pages/:id', component: InnerPage },
+
         { path: '/', component:Home},
         //{path:'/pages',component: Pages},
         { path: '/facts', component: Facts},
         { path: '/about', component: Intro},
         {path:'/testimonial',component:Testimonial},
         { path: '/package', component: Package },
+
         { path: '/upload', component: Vue.component('upload', require('./components/Upload.vue'))},
         { path: '/passport', component: Pages},
 

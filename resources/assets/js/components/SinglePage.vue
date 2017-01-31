@@ -12,21 +12,8 @@
                     <div class="panel-body">
                         <!--Image Gallery-->
 
-                        <!--<child-posts v-bind:posts="posts.data" :title="1"></child-posts>-->
-
-                        <div v-for="image in page.media" v-show="Object.keys(page.media).length">
-
-                            <ul v-show="Object.keys(image).length">
-                                <li v-for="src in image">
-                                    <img :src="'http://localhost:8000/storage' + src.thumb"
-                                         class="image img img-responsive ">
-                                </li>
-
-                            </ul>
-                        </div>
-
-
-
+                        <child-posts v-bind:posts="page.posts" ></child-posts>
+                        <image-gallery v-bind:image="page.media" :title=1 bg="fffccc" ></image-gallery>
                     </div>
                 </div>
             </div>
@@ -41,8 +28,7 @@
          */
         data() {
             return {
-                page: [],
-                posts:[]
+                page: []
 
             };
         },
@@ -81,7 +67,7 @@
                 this.$http.get('/api/v1/pages/'+ this.$route.params.id +'?include=media,posts')
                         .then(response => {
                             this.page = response.data.data;
-                            this.posts = response.data.data.posts;
+
 
 
                         });
