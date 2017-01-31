@@ -43,6 +43,7 @@ const Social = Vue.component('social-icons', require('./components/socialIcons.v
 const Slider = Vue.component('banner-slider', require('./components/bannerSlider.vue'));
 const Package = Vue.component('package', require('./components/package.vue'));
 const Facts = Vue.component('facts', require('./components/facts.vue'));
+const Blog = Vue.component('blog', require('./components/blog.vue'));
 const Intro = Vue.component('intro', require('./components/intro.vue'));
 const About = Vue.component('about', require('./components/about.vue'));
 const Testimonial = Vue.component('testimonial', require('./components/testimonial.vue'));
@@ -69,7 +70,11 @@ const router = new VueRouter({
         //{path:'/pages',component: Pages},
         { path: '/facts', component: Facts},
         { path: '/about', component: Intro},
+
         { path:'/testimonial',component:Testimonial},
+
+        { path: '/blog', component: Blog},
+        {path:'/testimonial',component:Testimonial},
         { path: '/package', component: Package },
 
         { path: '/upload', component: Vue.component('upload', require('./components/Upload.vue'))},
@@ -78,6 +83,8 @@ const router = new VueRouter({
     ]
 
 })
+
+
 //Router Mounted
 const app = new Vue({
     router,
