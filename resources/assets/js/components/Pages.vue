@@ -4,21 +4,36 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <div class="panel-heading">Pages List</div>
+                    <div class="panel-body" >
+                        <div v-for="pge in pages">
+                            <div v-for="page in pge">
+                                <h1>{{page.title}}</h1>
+                                <p>{{page.description}}</p>
 
-                    <div class="panel-body">
-
-                        <ul v-for="page in pages">
-
-                            <div v-show="Object.keys(page.posts).length" class="row">
-                               <!-- <child-posts v-bind:posts="page.posts"></child-posts>-->
+                                <!--Media-->
+                                <ul v-if="page.media !== undefined && Object.keys(page.media.data).length">
+                                    <li v-for="src in page.media.data" style="display:inline-block">
+                                        <img :src="'http://localhost:8000' + src.thumb" class="image img img-responsive ">
+                                    </li>
+                                </ul>
+                                <!--Posts-->
+                                <div v-if="page.posts !== undefined && Object.keys(page.posts).length" class="row">
+                                    <child-posts v-bind:posts="page.posts" v-bind:title=0></child-posts>
+                                </div>
                             </div>
-                            <ul v-show="page.media !== undefined && Object.keys(pst.media.data).length">
-                                <li v-for="src in pst.media.data">
-                                    <img :src="'http://localhost:8000/storage' + src.thumb" class="image img img-responsive ">
-                                </li>
+                        </div>
 
-                            </ul>
+
+<!--
+                        <ul v-for="post in pages">
+
+                            <div v-for="page in post">
+                                {{page}}
+
+
+                            </div>
                         </ul>
+-->
                     </div>
                 </div>
             </div>
@@ -72,6 +87,7 @@
                 this.$http.get('/api/v1/pages?include=media,posts')
                         .then(response => {
                             this.pages = response.data;
+                            console.log('got response');
                         });
             },
 

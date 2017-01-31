@@ -1,11 +1,15 @@
 <template>
-    <div>
-
+    <div class="row">
       <child-posts v-bind:posts="posts"></child-posts>
     </div>
 </template>
 
 
+<style scoped>
+    body{
+        background-color:#ff0000;
+    }
+</style>
 
 <script>
     import SinglePost from './ChildPosts.vue'

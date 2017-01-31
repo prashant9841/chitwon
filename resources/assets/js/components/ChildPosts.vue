@@ -1,8 +1,9 @@
 <template>
-    <div class="container">
-        <h3>Posts</h3>
-        <ul >
-            <li v-for="pst in posts">
+    <div class="row">
+        <h3 v-show="title">Posts</h3>
+        <ul v-for="post in posts">
+
+            <li v-for="pst in post">
                 <h4>{{ pst.title }}</h4>
                 <p>{{ pst.excerpt }}</p>
             </li>
