@@ -88,14 +88,16 @@ a {
 		}
 	}
 
+	.logo {
+	    position: absolute;
+	    top: 25px;
+	    left: 7%;
+	}
 	.top-nav {
 		height: 7vh;
 		min-height: 50px;
 		background: $primary-color;
 
-		.logo {
-			float: left;
-		}
 
 		ul {
 			margin-top: 15px;

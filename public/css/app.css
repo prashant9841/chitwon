@@ -175,14 +175,16 @@ a:hover {
   display: inline-block;
 }
 
+.page-header .logo {
+  position: absolute;
+  top: 25px;
+  left: 7%;
+}
+
 .page-header .top-nav {
   height: 7vh;
   min-height: 50px;
   background: #1c6804;
-}
-
-.page-header .top-nav .logo {
-  float: left;
 }
 
 .page-header .top-nav ul {

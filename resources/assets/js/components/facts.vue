@@ -4,7 +4,8 @@
    			
    		</div>
    		<div class="wrap">
-   			<h1>facts about <span>chitwan national park</span><img src="images/leaves.png" alt=""></h1>
+   			<h1>Facts about <span>chitwan national park</span>
+   			<img src="images/leaves.png" alt=""></h1>
    			<ul class="facts-wrap">
 				<li v-for="fact in facts">
 		    		<a :href="fact.link"><p>{{fact.description}}</p></a>

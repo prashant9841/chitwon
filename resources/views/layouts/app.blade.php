@@ -33,9 +33,9 @@
         </div> --}}
 
         <header class="page-header">
-                    <div class="logo">
-                        <img src="frontend/images/logo.png" alt="">
-                    </div>
+            <div class="logo">
+                <img src="frontend/images/logo.png" alt="">
+            </div>
             <div class="top-nav">
               
 
