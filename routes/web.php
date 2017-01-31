@@ -12,10 +12,27 @@ use Illuminate\Http\Request;
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
 
+Route::get('/{vue_capture?}', function () {
+            return view('welcome');
+        })->where('vue_capture', '[\/\w\.-]*');
+
+Auth::routes();
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::group(['prefix' => 'dashboard'], function () {
+        Route::get('/{vue_capture?}', function () {
+            return view('home');
+        })->where('vue_capture', '[\/\w\.-]*');
+    });
+});
+/*
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('/', function () {
+    return view('welcome');
+});
 Auth::routes();
 
 Route::get('/logout',function(){
@@ -41,6 +58,7 @@ Route::get('/{catchall?}', function () {
 })->where('catchall', '(.*)');
 
 
+
 Route::post('upload',function(Request $request){
 	$page = \App\Page::findOrFail(1);
 	
@@ -49,3 +67,6 @@ Route::post('upload',function(Request $request){
 	}
 	//echo "HEL";
 });
+
+
+*/

@@ -1,7 +1,7 @@
 <template>
 	<ul>
 		<li v-for="menu in menus">
-			<a :href="'#'+menu.link">{{menu.name}}</a>
+			<a :href="menu.link">{{menu.name}}</a>
 		</li>
 	</ul>
 	

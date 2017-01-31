@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/frontend/stylesheets/themify-icons.css">
     <link rel="stylesheet" href="/frontend/stylesheets/animate.css">
     <link rel="stylesheet" href="/frontend/stylesheets/animateSlider.css">
-    <link href="/frontend/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    {{-- <link href="/frontend/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> --}}
 
     <!-- Scripts -->
     <script>
@@ -41,8 +41,8 @@
                         <img src="frontend/images/logo.png" alt="">
                     </div>
                     
-<!--                     <contact-info></contact-info>   
-                 -->                </div>
+                    <contact-info></contact-info>   
+                </div>
             </div>
             <div class="bottom-nav">
                 <div class="wrap clearfix">
