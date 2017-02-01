@@ -1,0 +1,49 @@
+
+section.about{
+	margin: 20px auto;
+	width:95%;
+	.aboutPart{
+		float: left;
+		width: 59%;
+		
+	}
+	.commentPart{
+		float: right;
+		border: 1px solid black;
+		width: 38%;
+	}
+	.imageWrapper{
+		-webkit-box-shadow: -1px 0px 5px 0.5px rgba(204,204,204,1);
+		-moz-box-shadow: -1px 0px 5px 0.5px rgba(204,204,204,1);
+		box-shadow: -1px 0px 5px 0.5px rgba(204,204,204,1);
+		border: 1px solid #ccc;
+		width: 100%; 
+		padding: 5px;
+		margin: 0;
+		img{
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.empolyeeImage{
+		float: left;
+		width: 33%;
+		border:1px solid #ccc;
+		img{
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.voiceDetails{
+		width:66%;
+		float: right;
+	}
+
+}
+.c{
+	clear: both;
+}

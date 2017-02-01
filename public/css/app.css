@@ -791,4 +791,57 @@ footer.page-footer .copyright p {
   }
 }
 
+section.about {
+  margin: 20px auto;
+  width: 95%;
+}
+
+section.about .aboutPart {
+  float: left;
+  width: 59%;
+}
+
+section.about .commentPart {
+  float: right;
+  border: 1px solid black;
+  width: 38%;
+}
+
+section.about .imageWrapper {
+  box-shadow: -1px 0px 5px 0.5px #cccccc;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 5px;
+  margin: 0;
+}
+
+section.about .imageWrapper img {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section.about .empolyeeImage {
+  float: left;
+  width: 33%;
+  border: 1px solid #ccc;
+}
+
+section.about .empolyeeImage img {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section.about .voiceDetails {
+  width: 66%;
+  float: right;
+}
+
+.c {
+  clear: both;
+}
+
 /*# sourceMappingURL=app.css.map */
