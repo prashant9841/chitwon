@@ -791,4 +791,25 @@ footer.page-footer .copyright p {
   }
 }
 
+.contact-page .wrap {
+  padding-top: 100px;
+}
+
+.contact-page .contact-info {
+  font-size: 26px;
+}
+
+.contact-page .contact-info a {
+  color: #000 !important;
+}
+
+.contact-page .contact-form input, .contact-page .contact-form textarea {
+  width: 90%;
+}
+
+.contact-page .contact-form .el-checkbox {
+  float: right;
+  padding-right: 10%;
+}
+
 /*# sourceMappingURL=app.css.map */
