@@ -67,14 +67,13 @@ const router = new VueRouter({
         { path: '/pages/:id', component: InnerPage },
 
         { path: '/', component:Home},
-        //{path:'/pages',component: Pages},
         { path: '/facts', component: Facts},
         { path: '/about', component: Intro},
 
         { path:'/testimonial',component:Testimonial},
 
         { path: '/blog', component: Blog},
-        {path:'/testimonial',component:Testimonial},
+
         { path: '/package', component: Package },
 
         { path: '/upload', component: Vue.component('upload', require('./components/Upload.vue'))},

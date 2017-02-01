@@ -10,6 +10,8 @@
 		    		<p>{{comment.description}}</p>
 		    		<hr>
 				</li>
+				<li><el-button>Add a button</el-button></li>
+				
 			</ul>
    		</div>
    	</section>
