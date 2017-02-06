@@ -56,14 +56,11 @@ const Facts = Vue.component('facts', require('./components/facts.vue'));
 const Blog = Vue.component('blog', require('./components/blog.vue'));
 const Intro = Vue.component('intro', require('./components/intro.vue'));
 const About = Vue.component('about', require('./components/about.vue'));
-<<<<<<< HEAD
 const Voices = Vue.component('voices', require('./components/voices.vue'));
 const FAQs = Vue.component('faq', require('./components/FAQ.vue'));
 const Message = Vue.component('message-comp', require('./components/comp_message.vue'));
 const AboutCompany = Vue.component('about-company', require('./components/aboutcompany.vue'));
-=======
 const ContactUs = Vue.component('contact-us', require('./components/contact.vue'));
->>>>>>> master
 const Testimonial = Vue.component('testimonial', require('./components/testimonial.vue'));
 const contactInfo = Vue.component('contact-info', require('./components/contactInfo.vue'));
 const contactForm = Vue.component('contact-form', require('./components/contactForm.vue'));
