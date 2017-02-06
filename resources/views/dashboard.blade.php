@@ -3,7 +3,7 @@
     <div id="main-content">
 
 {{-- # Take it out on another file and include --}}
-       <div class="top-nav">
+        <div class="top-nav">
             <div class="toggle-nav"><i class="ti-menu"></i></div>
             <ul class="right">
                 <li>
@@ -25,9 +25,9 @@
         <div class="welcome">
             <h1>Welcome <span>To Axle</span></h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo corrupti molestias obcaecati delectus, labore, odit aperiam commodi rerum tempore fuga. Debitis natus voluptate, pariatur omnis.</p>
-
-            <el-button><a href="index-2.php">Start Project</a></el-button>
-
+            <router-link to="/dashboard/user">GO GO GO</router-link>
+            {{--<el-button><a href="index-2.php">Start Project</a></el-button>--}}
+    <router-view></router-view>
 
         </div>
 

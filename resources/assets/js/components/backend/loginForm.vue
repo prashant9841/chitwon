@@ -16,7 +16,7 @@
 </template>
 
 <script>
-
+import {ElForm} from 'element-ui'
     export default{
         data(){
             return {
@@ -59,6 +59,9 @@
 		      resetForm(formName) {
 		        this.$refs[formName].resetFields();
 		      }
+	    	},
+	    	components:{
+	    	ElForm
 	    	}
     }
 </script>

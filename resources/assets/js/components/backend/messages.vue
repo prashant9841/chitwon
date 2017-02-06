@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import {ElDropdownItem,ElDropdown} from 'element-ui';
 
     export default{
         data(){
@@ -30,6 +31,9 @@
                   { name: 'taso', link: 'Paso'},
                 ]
 		  }
+        },
+        components:{
+            'el-dropdown':ElDropdown,'el-dropdown-item':ElDropdownItem
         }
 
     }

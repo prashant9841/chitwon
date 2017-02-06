@@ -1,4 +1,4 @@
-<template>
+<template xmlns:v-bind="http://www.w3.org/1999/xhtml">
     <div class="user">
         <el-dropdown  trigger="click">
             <p type="primary">
@@ -12,16 +12,18 @@
         </el-dropdown>
     </div>
 </template>
-<style>
-    body{
-        background-color:#ff0000;
-    }
-</style>
+
 <script>
+import ElDropdown from 'element-ui';
+import ElDropdownMenu from 'element-ui';
+import ElDropdownItem from 'element-ui';
 
     export default{
         data(){
-            return { name: 'MessagesMessagesMessages', link: 'el/paso', image: 'images/logo.png'}
+            return { name: 'MessagesMessagesMessages', link: 'el/paso', image: 'frontend/images/logo.png'}
+        },
+        components:{
+            ElDropdown,ElDropdownMenu,ElDropdownItem
         }
     }
 </script>
