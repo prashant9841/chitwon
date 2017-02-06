@@ -40,11 +40,8 @@ const Copyright = Vue.component('copyright', {
 ---------------------------------------------------------
 */
 const Pages = Vue.component('pages',require('./components/Pages.vue'));
-
 const InnerPage = Vue.component('single-page',require('./components/SinglePage.vue'));
-
 const Image = Vue.component('image-gallery',require('./components/Image.vue'));
-
 const Post = Vue.component('child-posts', require('./components/ChildPosts.vue'));
 const AllPosts = Vue.component('posts', require('./components/Posts.vue'));
 const IndividualPosts = Vue.component('individual-posts', require('./components/IndividualPost.vue'));
@@ -60,7 +57,7 @@ const ContactUs = Vue.component('contact-us', require('./components/contact.vue'
 const Testimonial = Vue.component('testimonial', require('./components/testimonial.vue'));
 const contactInfo = Vue.component('contact-info', require('./components/contactInfo.vue'));
 const contactForm = Vue.component('contact-form', require('./components/contactForm.vue'));
-
+const loginForm = Vue.component('login-form',require('./components/backend/loginForm.vue'));
 // const googleMap = Vue.component('google-map', require('./components/map.vue'));
 /*
 ---------------------------------------------------------
@@ -68,7 +65,7 @@ const contactForm = Vue.component('contact-form', require('./components/contactF
 ---------------------------------------------------------
 */
 const Home = Vue.component('home', require('./components/home.vue'));
-const NotFound = Vue.component('home', require('./components/NotFound.vue'));
+const NotFound = Vue.component('not-found', require('./components/NotFound.vue'));
 
 const router = new VueRouter({
 
@@ -82,13 +79,12 @@ const router = new VueRouter({
         { path: '/pages/:id', component: InnerPage },
 
         { path: '/', component:Home},
-
-        {path:'/facts',
+        {path:'/login', component:loginForm},
+        {path:'/admin',
             beforeEnter: (to, from, next) => {
-                next({path: 'about'});
+                next({path: 'dashboard'});
             }
         },
-        /*{ path: '/facts', component: Facts},*/
 
         { path: '/facts', component: Facts},
 

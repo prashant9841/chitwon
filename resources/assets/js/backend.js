@@ -33,7 +33,7 @@ const router = new VueRouter({
     mode: 'history',
     histroy: true,
     routes: [
-        { path: '/dashboard', components: {component:user} },
+        { path: '/dashboard', components: user },
     ]
 
 

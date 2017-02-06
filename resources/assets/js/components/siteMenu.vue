@@ -8,12 +8,6 @@
 			</li>
 		</ul>
 	</div>
-<!--
-	<ul>
-		<li v-for="menu in menus">
-			<a :href="menu.link">{{menu.name}}</a>
-		</li>
-	</ul>-->
 	
 </template>
 <script>

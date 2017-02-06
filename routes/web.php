@@ -12,32 +12,37 @@ use Illuminate\Http\Request;
 |
 */
 
+//From SUggestion Matt Staufer
+Route::group(['middleware' => 'auth'], function () {
+
+    Route::group(['prefix' => 'dashboard'], function () {
+        Route::get('/{vue_backend?}', function () {
+            return view('dashboard');
+        })->where('vue_backend', '(.*)');
+    });
+
+    //[\/\w\.-]*
+});
+
+Auth::routes();
+Route::get('/logout',function (){
+    Auth::logout();
+});
 Route::get('/{vue_capture?}', function () {
             return view('welcome');
         })->where('vue_capture', '[\/\w\.-]*');
 
-Auth::routes();
 
-//From SUggestion Matt Staufer
-//Route::group([], function () {
 
-    Route::group(['prefix' => 'dashboard','middleware' => 'auth'], function () {
-        Route::get('/{vue_capture?}', function () {
-            return view('dashboard');
-        })->where('vue_capture', '(.*)');
-    });
-
-    //[\/\w\.-]*
-//});
 
 
 /*
-
-Route::get('/home', 'HomeController@index');
-
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', 'HomeController@index');
+
 
 
 Route::get('/logout',function(){
@@ -47,8 +52,6 @@ Route::get('/logout',function(){
 Route::get('/test', ['middleware' => 'guest', function () {
     return view('welcome');
 }]);
-
-
 
 
 
