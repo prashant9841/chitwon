@@ -1,5 +1,61 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+/*
+
+// Body
+$body-bg: #f5f8fa;
+
+// Borders
+$laravel-border-color: darken($body-bg, 10%);
+$list-group-border: $laravel-border-color;
+$navbar-default-border: $laravel-border-color;
+$panel-default-border: $laravel-border-color;
+$panel-inner-border: $laravel-border-color;
+
+// Brands
+$brand-primary: #3097D1;
+$brand-info: #8eb4cb;
+$brand-success: #2ab27b;
+$brand-warning: #cbb956;
+$brand-danger:  #bf5329;
+
+// Typography
+$font-family-sans-serif: "Raleway", sans-serif;
+$font-size-base: 14px;
+$line-height-base: 1.6;
+$text-color: #636b6f;
+
+// Navbar
+$navbar-default-bg: #fff;
+
+// Buttons
+$btn-default-color: $text-color;
+
+// Inputs
+$input-border: lighten($text-color, 40%);
+$input-border-focus: lighten($brand-primary, 25%);
+$input-color-placeholder: lighten($text-color, 30%);
+
+// Panels
+$panel-default-heading-bg: #fff;
+*/
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300);
+@font-face {
+  font-family: 'NexaLight';
+  src: url("../fonts/NexaLight.eot");
+  src: url("../fonts/NexaLight.woff2") format("woff2"), url("../fonts/NexaLight.woff") format("woff"), url("../fonts/NexaLight.ttf") format("truetype"), url("../fonts/NexaLight.svg#NexaLight") format("svg"), url("../fonts/NexaLight.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NexaBold';
+  src: url("../fonts/NexaBold.eot");
+  src: url("../fonts/NexaBold.woff2") format("woff2"), url("../fonts/NexaBold.woff") format("woff"), url("../fonts/NexaBold.ttf") format("truetype"), url("../fonts/NexaBold.svg#NexaBold") format("svg"), url("../fonts/NexaBold.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @font-face {
   font-family: 'NexaLight';
   src: url("../fonts/NexaLight.eot");
@@ -791,6 +847,7 @@ footer.page-footer .copyright p {
   }
 }
 
+<<<<<<< HEAD
 section.about {
   margin: 20px auto;
   width: 90%;
@@ -903,6 +960,27 @@ section.about .messageForm {
 
 .c {
   clear: both;
+=======
+.contact-page .wrap {
+  padding-top: 100px;
+}
+
+.contact-page .contact-info {
+  font-size: 26px;
+}
+
+.contact-page .contact-info a {
+  color: #000 !important;
+}
+
+.contact-page .contact-form input, .contact-page .contact-form textarea {
+  width: 90%;
+}
+
+.contact-page .contact-form .el-checkbox {
+  float: right;
+  padding-right: 10%;
+>>>>>>> master
 }
 
 /*# sourceMappingURL=app.css.map */

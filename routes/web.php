@@ -12,20 +12,25 @@ use Illuminate\Http\Request;
 |
 */
 
-
 Route::get('/{vue_capture?}', function () {
             return view('welcome');
         })->where('vue_capture', '[\/\w\.-]*');
 
 Auth::routes();
 
-Route::group(['middleware' => 'auth'], function () {
-    Route::group(['prefix' => 'dashboard'], function () {
+//From SUggestion Matt Staufer
+//Route::group([], function () {
+
+    Route::group(['prefix' => 'dashboard','middleware' => 'auth'], function () {
         Route::get('/{vue_capture?}', function () {
-            return view('home');
-        })->where('vue_capture', '[\/\w\.-]*');
+            return view('dashboard');
+        })->where('vue_capture', '(.*)');
     });
-});
+
+    //[\/\w\.-]*
+//});
+
+
 /*
 
 Route::get('/home', 'HomeController@index');
@@ -33,29 +38,17 @@ Route::get('/home', 'HomeController@index');
 Route::get('/', function () {
     return view('welcome');
 });
-Auth::routes();
+
 
 Route::get('/logout',function(){
-    Auth::logout();
+    return Auth::logout();
 });
-//From SUggestion Matt Staufer
-//Route::group([], function () {
 
-    Route::group(['prefix' => 'dashboard'], function () {
-        Route::get('/{vue_capture?}', function () {
-            return view('home');
-        })->where('vue_capture', '(.*)');
-    });
-
-    //[\/\w\.-]*
-//});
 Route::get('/test', ['middleware' => 'guest', function () {
     return view('welcome');
 }]);
 
-Route::get('/{catchall?}', function () {
-    return response()->view('welcome');
-})->where('catchall', '(.*)');
+
 
 
 

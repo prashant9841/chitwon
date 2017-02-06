@@ -744,3 +744,30 @@ footer.page-footer {
 		}
 	}
 }
+
+
+
+
+.contact-page {
+	.wrap {
+		padding-top: 100px;
+	}
+	.contact-info {
+		font-size: 26px;
+		// text-align: center;
+
+		a {
+			color: #000 !important;
+		}
+	}
+
+	.contact-form {
+		input, textarea {
+			width: 90%;
+		}
+		.el-checkbox {
+			float: right;
+			padding-right: 10%;
+		}
+	}
+}

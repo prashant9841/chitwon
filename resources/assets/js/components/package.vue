@@ -36,20 +36,20 @@
 <script>
 	export default{
  		props:{
-	     	description:{
-	     		type: String,
-	     		required: false,
-	     		default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, facere.'
-	     	},
+	     	// description:{
+	     	// 	type: String,
+	     	// 	required: false,
+	     	// 	default: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, facere.'
+	     	// },
 	     	"package-title":{
 	     		type: [Boolean, String, Number],
 	     		required: false,
-	     		default: false,
-	     	},
-	     	packages:{
-	     		type: [Array,Object],
-	     		required: true,
+	     		default: true,
 	     	}
+	     	// packages:{
+	     	// 	type: [Array,Object],
+	     	// 	required: true,
+	     	// }
 	    },
 	    
 		methods: {
@@ -59,7 +59,31 @@
 	      }
 	     
 
-	    }
+	    },
+	    data(){
+			return {
+				description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat mollitia doloribus eos, voluptatum dicta assumenda laudantium. Consectetur atque ducimus perspiciatis, minus enim et vero, repellendus!',
+				packages:{
+					gallery1: [
+						{ title: 'twitter', link: 'index.php', image: 'frontend/images/img1.jpg'},
+						{ title: 'linkedIn', link: 'index.php', image: 'frontend/images/img2.jpg'},
+						{ title: 'facebook', link: 'index.php', image: 'frontend/images/img3.jpg'},
+						{ title: 'facebook', link: 'index.php', image: 'frontend/images/img4.jpg'}
+					],
+					gallery2: [
+						{ title: 'facebook', link: 'index.php', image: 'frontend/images/img5.jpg'},
+						{ title: 'facebook', link: 'index.php', image: 'frontend/images/img6.jpg'},
+						{ title: 'facebook', link: 'index.php', image: 'frontend/images/img7.jpg'}
+					],
+					gallery3: [
+						{ title: 'facebook', link: 'index.php', image: 'frontend/images/img8.jpg'},
+						{ title: 'facebook', link: 'index.php', image: 'frontend/images/img9.jpg'},
+						{ title: 'facebook', link: 'index.php', image: 'frontend/images/img10.jpg'},
+						{ title: 'facebook', link: 'index.php', image: 'frontend/images/img12.jpg'}
+					],
+			   	}
+			}
+		}
 	}
 </script>
 
