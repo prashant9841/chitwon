@@ -29,9 +29,11 @@
 		    menus: [
 		      { name: 'Home', link: '/', index: '1'},
 		      { name: 'About', link: 'about', index: '1.1'},
-		      { name: 'Testimonial', link: 'testimonial', index: '1.2'},
-		      { name: 'Facts', link: 'facts', index: '2'},
-		      { name: 'Package', link: 'package', index: '2.1'}
+		      { name: 'Our Activities', link: 'package', index: '2.1'},
+		      { name: 'Chitwan National park', link: 'facts', index: '2'},
+		      { name: 'Client\'s Words', link: 'testimonial', index: '1.2'},
+		      { name: 'Blog', link: 'blog', index: '2.1'},
+		      { name: 'Contact Us', link: 'contact', index: '2.1'}
 		    ]
 		  }
 		}

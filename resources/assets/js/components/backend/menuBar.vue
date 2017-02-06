@@ -14,7 +14,7 @@ import {ElementUI, ElMenu, ElMenuItem} from 'element-ui';
        data:function() {
 			  return {
 			    menus: [
-			      { name: 'Home', link: 'index.php', index: '1'},
+			      { name: 'Home',link: 'index.php', index: '1'},
 			      { name: 'AllUsers', link: 'users.php', index: '1.1'},
 			      { name: 'taso', link: 'Paso', index: '1.2'},
 			      { name: 'Laso', link: 'Paso', index: '2'},

@@ -1,8 +1,18 @@
 import VueRouter from 'vue-router';
 //import PulseLoader from 'vue-spinner/src/PulseLoader.vue';
+
+// import * as VueGoogleMaps from 'vue2-google-maps';
 require('./bootstrap');
 
 Vue.use(VueRouter);
+
+// Vue.use(VueGoogleMaps, {
+//     load: {
+//       key: 'YAIzaSyB1mCyXjBc6gHEtFfBWb0n4AvwQMSQi83w',
+//       // v: 'OPTIONAL VERSION NUMBER',
+//       // libraries: 'places', //// If you need to use place input 
+//     }
+//   });
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -43,9 +53,15 @@ const Social = Vue.component('social-icons', require('./components/socialIcons.v
 const Slider = Vue.component('banner-slider', require('./components/bannerSlider.vue'));
 const Package = Vue.component('package', require('./components/package.vue'));
 const Facts = Vue.component('facts', require('./components/facts.vue'));
+const Blog = Vue.component('blog', require('./components/blog.vue'));
 const Intro = Vue.component('intro', require('./components/intro.vue'));
+const About = Vue.component('about', require('./components/about.vue'));
+const ContactUs = Vue.component('contact-us', require('./components/contact.vue'));
 const Testimonial = Vue.component('testimonial', require('./components/testimonial.vue'));
 const contactInfo = Vue.component('contact-info', require('./components/contactInfo.vue'));
+const contactForm = Vue.component('contact-form', require('./components/contactForm.vue'));
+
+// const googleMap = Vue.component('google-map', require('./components/map.vue'));
 /*
 ---------------------------------------------------------
         Main Pages
@@ -55,23 +71,35 @@ const Home = Vue.component('home', require('./components/home.vue'));
 const NotFound = Vue.component('home', require('./components/NotFound.vue'));
 
 const router = new VueRouter({
+
+    history: true,
+
     mode: 'history',
-    histroy: true,
+
     routes: [
         // dynamic segments start with a colon
 
         { path: '/pages/:id', component: InnerPage },
 
         { path: '/', component:Home},
+
         {path:'/facts',
             beforeEnter: (to, from, next) => {
                 next({path: 'about'});
             }
         },
         /*{ path: '/facts', component: Facts},*/
+
+        { path: '/facts', component: Facts},
+
         { path: '/about', component: Intro},
-        {path:'/testimonial',component:Testimonial},
+
+        { path:'/testimonial',component:Testimonial},
+
+        { path: '/blog', component: Blog},
+
         { path: '/package', component: Package },
+        { path: '/contact', component: ContactUs },
 
         { path: '/upload', component: Vue.component('upload', require('./components/Upload.vue'))},
         { path: '/passport', component: Pages},
@@ -79,6 +107,8 @@ const router = new VueRouter({
     ]
 
 })
+
+
 //Router Mounted
 const app = new Vue({
     router,

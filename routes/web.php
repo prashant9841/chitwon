@@ -12,11 +12,12 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('/{vue_capture?}', function () {
+            return view('welcome');
+        })->where('vue_capture', '[\/\w\.-]*');
+
 Auth::routes();
 
-Route::get('/logout',function(){
-    return Auth::logout();
-});
 //From SUggestion Matt Staufer
 //Route::group([], function () {
 
@@ -28,13 +29,27 @@ Route::get('/logout',function(){
 
     //[\/\w\.-]*
 //});
+
+
+/*
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
+Route::get('/logout',function(){
+    return Auth::logout();
+});
+
 Route::get('/test', ['middleware' => 'guest', function () {
     return view('welcome');
 }]);
 
-Route::get('/{catchall?}', function () {
-    return response()->view('welcome');
-})->where('catchall', '(.*)');
+
+
 
 
 Route::post('upload',function(Request $request){
@@ -45,3 +60,6 @@ Route::post('upload',function(Request $request){
 	}
 	//echo "HEL";
 });
+
+
+*/

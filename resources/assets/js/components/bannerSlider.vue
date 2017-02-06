@@ -1,11 +1,15 @@
 <template>
-	<el-carousel :autoplay="false" trigger='clicked' change='changed'>
-      <el-carousel-item v-for="slide in slider" >
-      	<img :src="slide.image" alt="" class="bg-image">
-        <h1>{{slide.title}}</h1>
-        <h3>{{slide.description}}</h3>
-      </el-carousel-item>
-    </el-carousel>
+
+	<section class="banner">
+		<el-carousel :autoplay="false" trigger='clicked' change='changed'>
+	      <el-carousel-item v-for="slide in slider" >
+	      	<img :src="slide.image" alt="" class="bg-image">
+	        <h1>{{slide.title}}</h1>
+	        <h3>{{slide.description}}</h3>
+	      </el-carousel-item>
+	    </el-carousel>
+
+	</section>	
 </template>
 <script>
 import { Carousel } from 'element-ui'
