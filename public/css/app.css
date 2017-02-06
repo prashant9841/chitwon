@@ -793,7 +793,7 @@ footer.page-footer .copyright p {
 
 section.about {
   margin: 20px auto;
-  width: 95%;
+  width: 90%;
 }
 
 section.about .aboutPart {
@@ -803,7 +803,6 @@ section.about .aboutPart {
 
 section.about .commentPart {
   float: right;
-  border: 1px solid black;
   width: 38%;
 }
 
@@ -822,9 +821,22 @@ section.about .imageWrapper img {
   height: 100%;
 }
 
+section.about .voiceWrapper {
+  overflow: hidden;
+  height: 105px;
+  margin-bottom: 10px;
+}
+
+section.about .messageHeader {
+  margin: 0 0 10px 0;
+  color: #fff;
+  padding: 10px 0 10px 10px;
+  background-color: #1c6804;
+}
+
 section.about .empolyeeImage {
   float: left;
-  width: 33%;
+  width: 25%;
   border: 1px solid #ccc;
 }
 
@@ -836,8 +848,57 @@ section.about .empolyeeImage img {
 }
 
 section.about .voiceDetails {
-  width: 66%;
+  width: 72%;
   float: right;
+  color: #666;
+}
+
+section.about .voiceDetails h3 {
+  padding: 0;
+  margin: 0;
+}
+
+section.about .voiceDetails h5 {
+  padding: 0;
+  margin: 0;
+}
+
+section.about .voiceDetails .empMessage {
+  margin-top: 10px;
+}
+
+section.about .messageDiv {
+  padding: 0px 10px;
+  margin-top: 10px;
+  border-bottom: 1px solid #ccc;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+section.about .messageDiv h3 {
+  color: #0190fe;
+  padding: 0;
+  margin: 0;
+}
+
+section.about .messageDiv h4 {
+  color: #fb5946;
+  padding: 0;
+  margin: 0;
+}
+
+section.about .messageDiv p {
+  margin: 0;
+  padding: 5px 15px;
+}
+
+section.about .messageDiv .mail {
+  text-decoration: underline;
+  font-style: normal;
+}
+
+section.about .messageForm {
+  margin-top: 10px;
 }
 
 .c {
