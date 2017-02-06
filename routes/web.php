@@ -12,21 +12,17 @@ use Illuminate\Http\Request;
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
-
 Auth::routes();
 
 Route::get('/logout',function(){
-    Auth::logout();
+    return Auth::logout();
 });
 //From SUggestion Matt Staufer
 //Route::group([], function () {
 
-    Route::group(['prefix' => 'dashboard'], function () {
+    Route::group(['prefix' => 'dashboard','middleware' => 'auth'], function () {
         Route::get('/{vue_capture?}', function () {
-            return view('home');
+            return view('dashboard');
         })->where('vue_capture', '(.*)');
     });
 

@@ -1,9 +1,19 @@
 <template>
+	<div>
+
+		<ul >
+
+			<li v-for="menu in menus">
+				<router-link :to="menu.link">{{menu.name}}</router-link>
+			</li>
+		</ul>
+	</div>
+<!--
 	<ul>
 		<li v-for="menu in menus">
-			<a :href="'#'+menu.link">{{menu.name}}</a>
+			<a :href="menu.link">{{menu.name}}</a>
 		</li>
-	</ul>
+	</ul>-->
 	
 </template>
 <script>

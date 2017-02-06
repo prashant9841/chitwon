@@ -52,24 +52,30 @@ const contactInfo = Vue.component('contact-info', require('./components/contactI
 ---------------------------------------------------------
 */
 const Home = Vue.component('home', require('./components/home.vue'));
+const NotFound = Vue.component('home', require('./components/NotFound.vue'));
 
 const router = new VueRouter({
     mode: 'history',
+    histroy: true,
     routes: [
         // dynamic segments start with a colon
 
         { path: '/pages/:id', component: InnerPage },
 
         { path: '/', component:Home},
-        //{path:'/pages',component: Pages},
-        { path: '/facts', component: Facts},
+        {path:'/facts',
+            beforeEnter: (to, from, next) => {
+                next({path: 'about'});
+            }
+        },
+        /*{ path: '/facts', component: Facts},*/
         { path: '/about', component: Intro},
         {path:'/testimonial',component:Testimonial},
         { path: '/package', component: Package },
 
         { path: '/upload', component: Vue.component('upload', require('./components/Upload.vue'))},
         { path: '/passport', component: Pages},
-
+        { path: '*', component: NotFound},
     ]
 
 })
