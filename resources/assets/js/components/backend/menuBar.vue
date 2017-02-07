@@ -8,10 +8,11 @@
 </template>
 
 <script>
-import {ElementUI, ElMenu, ElMenuItem} from 'element-ui';
+
+import {ElMenu,ElMenuItem } from 'element-ui';
 
     export default{
-       data:function() {
+       data() {
 			  return {
 			    menus: [
 			      { name: 'Home',link: 'index.php', index: '1'},
@@ -32,7 +33,7 @@ import {ElementUI, ElMenu, ElMenuItem} from 'element-ui';
 			    }
 			},
 		components:{
-			    ElMenu, ElementUI, ElMenuItem
+			    'el-menu':ElMenu, 'el-menu-item':ElMenuItem
 			}
 
     }

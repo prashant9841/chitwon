@@ -6,7 +6,9 @@
                 <i class="ti-bell"></i>
             </p>
             <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item v-for="message in messages"><a :href="message.link" >{{message.name}}</a></el-dropdown-item>
+                <el-dropdown-item v-for="message in messages">
+                    <a :href="message.link" >{{message.name}}</a>
+                </el-dropdown-item>
             </el-dropdown-menu>
         </el-dropdown>
     </div>
@@ -14,6 +16,7 @@
 </template>
 
 <script>
+import {ElDropdownItem,ElDropdown} from 'element-ui';
 
     export default{
         data(){
@@ -30,6 +33,9 @@
                   { name: 'taso', link: 'Paso'},
                 ]
 		  }
+        },
+        components:{
+            'el-dropdown':ElDropdown,'el-dropdown-item':ElDropdownItem
         }
 
     }

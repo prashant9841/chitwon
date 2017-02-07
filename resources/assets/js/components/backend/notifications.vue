@@ -18,7 +18,7 @@
     }
 </style>
 <script>
-import ElementUI from 'element-ui'
+import ElDropdown from 'element-ui'
 
     export default{
       data() {
@@ -37,7 +37,7 @@ import ElementUI from 'element-ui'
 		  }
 		},
 		components:{
-		    ElementUI
+		    ElDropdown
 		}
 
     }

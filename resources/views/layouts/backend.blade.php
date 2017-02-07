@@ -9,7 +9,7 @@
     <title> Axle Backend </title>
 
     <!-- Styles -->
-    {{--<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">--}}
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
     <link href="/css/backend.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
     <!-- Scripts -->
@@ -20,7 +20,7 @@
     </script>
 </head>
 <body>
-<div id="app">
+<div id="backend">
     {{--<div class="loading">
         <h1>Loading</h1>
     </div>--}}
@@ -29,7 +29,7 @@
             <img src="frontend/images/logo.png" alt="">
         </div>
         <div class="navs">
-            <menu-bar></menu-bar>
+            {{--<menu-bar></menu-bar>--}}
         </div>
     </div>
 
@@ -37,6 +37,7 @@
 
 
 </div>
-<script src="/js/backend.js"></script>
+
+<script src="/js/backend.js" async defer></script>
 </body>
 </html>
