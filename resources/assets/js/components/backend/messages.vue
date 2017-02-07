@@ -6,7 +6,9 @@
                 <i class="ti-bell"></i>
             </p>
             <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item v-for="message in messages"><a :href="message.link" >{{message.name}}</a></el-dropdown-item>
+                <el-dropdown-item v-for="message in messages">
+                    <a :href="message.link" >{{message.name}}</a>
+                </el-dropdown-item>
             </el-dropdown-menu>
         </el-dropdown>
     </div>

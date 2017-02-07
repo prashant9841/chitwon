@@ -1,7 +1,12 @@
+
 window._ = require('lodash');
+
 window.$ = window.jQuery = require('jquery');
+
 window.Vue = require('vue');
+
 require('vue-resource');
+
 require('element-ui');
 /**
  * We'll register a HTTP interceptor to attach the "CSRF" header to each of
@@ -29,7 +34,7 @@ Vue.use(VueRouter);
 #################################################
 -------------------------------------------------
 */
-
+//Testing purposes only
 const PassportC = Vue.component(
     'passport-clients',
     require('./components/passport/Clients.vue')
@@ -44,7 +49,7 @@ const PassportAT = Vue.component(
     'passport-personal-access-tokens',
     require('./components/passport/PersonalAccessTokens.vue')
 );
-
+// Remove test
 
 const Notifications = Vue.component('notifications', require('./components/backend/notifications.vue'));
 const menuBar = Vue.component('menu-bar', require('./components/backend/menuBar.vue'));
