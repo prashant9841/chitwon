@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import {ElDropdownItem,ElDropdown} from 'element-ui';
+// import {ElDropdownItem,ElDropdown} from 'element-ui';
 
     export default{
         data(){
@@ -35,7 +35,7 @@ import {ElDropdownItem,ElDropdown} from 'element-ui';
 		  }
         },
         components:{
-            'el-dropdown':ElDropdown,'el-dropdown-item':ElDropdownItem
+            // 'el-dropdown':ElDropdown,'el-dropdown-item':ElDropdownItem
         }
 
     }

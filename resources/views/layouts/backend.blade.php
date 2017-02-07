@@ -11,6 +11,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-default/index.css">
     <link href="/css/backend.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="frontend/stylesheets/themify-icons.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
     <!-- Scripts -->
     <script>

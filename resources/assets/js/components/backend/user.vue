@@ -14,16 +14,16 @@
 </template>
 
 <script>
-import ElDropdown from 'element-ui';
-import ElDropdownMenu from 'element-ui';
-import ElDropdownItem from 'element-ui';
+// import ElDropdown from 'element-ui';
+// import ElDropdownMenu from 'element-ui';
+// import ElDropdownItem from 'element-ui';
 
     export default{
         data(){
             return { name: 'MessagesMessagesMessages', link: 'el/paso', image: 'frontend/images/logo.png'}
         },
         components:{
-            ElDropdown,ElDropdownMenu,ElDropdownItem
+            // ElDropdown,ElDropdownMenu,ElDropdownItem
         }
     }
 </script>

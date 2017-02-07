@@ -6,6 +6,8 @@ require('./bootstrap');
 
 Vue.use(VueRouter);
 
+
+
 // Vue.use(VueGoogleMaps, {
 //     load: {
 //       key: 'YAIzaSyB1mCyXjBc6gHEtFfBWb0n4AvwQMSQi83w',
