@@ -1,24 +1,31 @@
 <template>
 	<section class="about">
-   		<div class="wrap">
-	   		<div class="logo-div">
-	   			<img src="images/img7.jpg" alt="">
+		<div class="aboutPart">
+	   		<about-company></about-company>
+	   		<div class="faqWrapper">
+	   			<div class="faqPart">
+	   				<faq></faq>
+	   			</div>
+	   			<message-comp></message-comp>
 	   		</div>
-	   		<h3>{{ title }}</h3>	
-			<p>{{description}}</p>
-   		</div>
+	   	</div>
+	   	<div class="commentPart">
+	   		<voices></voices>
+	   	</div>
+	   	<div class="c"></div>
    	</section>
 
 </template>
 <script>
+	import AboutCompany from './aboutcompany.vue';
+	import Message from './comp_message.vue';
+	import Faq from './FAQ.vue';
+	import Voices from './voices.vue';
 	
 	export default{
-
-		data: function () {
-		  return { 
-		  	title: 'About Tiger Encounter', 
-		  	description: 'Axle Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati nesciunt numquam, fugit quaerat sed totam rem, incidunt saepe laboriosam consectetur corporis ipsum, doloribus quos optio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut earum consequuntur illum praesentium dicta expedita in sed officiis quisquam quod ratione voluptate maxime eveniet quis, cumque, labore ipsa porro saepe excepturi, aperiam dolorum ex rerum.'
-			}
+		components:{
+			AboutCompany, Voices, Faq, Message
 		}
+
 	}
 </script>

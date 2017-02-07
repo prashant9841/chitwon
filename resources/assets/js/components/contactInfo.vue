@@ -10,8 +10,8 @@
 			<a :href="contact1"><i class="fa fa-phone"></i> {{contact1}}</a>
 		</li>
 		<li>
-			<i class="fa fa-envelope"></i>
-			<a :href="email">{{email}}</a
+			
+			<a :href="email"> <i class="fa fa-envelope"></i> {{email}}</a
 		</li>
 	</ul>
 </template>

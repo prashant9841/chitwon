@@ -53,6 +53,10 @@ const Facts = Vue.component('facts', require('./components/facts.vue'));
 const Blog = Vue.component('blog', require('./components/blog.vue'));
 const Intro = Vue.component('intro', require('./components/intro.vue'));
 const About = Vue.component('about', require('./components/about.vue'));
+const Voices = Vue.component('voices', require('./components/voices.vue'));
+const FAQs = Vue.component('faq', require('./components/FAQ.vue'));
+const Message = Vue.component('message-comp', require('./components/comp_message.vue'));
+const AboutCompany = Vue.component('about-company', require('./components/aboutcompany.vue'));
 const ContactUs = Vue.component('contact-us', require('./components/contact.vue'));
 const Testimonial = Vue.component('testimonial', require('./components/testimonial.vue'));
 const contactInfo = Vue.component('contact-info', require('./components/contactInfo.vue'));
@@ -79,16 +83,26 @@ const router = new VueRouter({
         { path: '/pages/:id', component: InnerPage },
 
         { path: '/', component:Home},
+<<<<<<< HEAD
         {path:'/login', component:loginForm},
         {path:'/admin',
             beforeEnter: (to, from, next) => {
                 next({path: 'dashboard'});
             }
         },
+=======
+
+        // {path:'/facts',
+        //     beforeEnter: (to, from, next) => {
+        //         next({path: 'about'});
+        //     }
+        // },
+        
+>>>>>>> 42116d9260c6ec328dddc666b28521c391bda38d
 
         { path: '/facts', component: Facts},
-
-        { path: '/about', component: Intro},
+        
+        { path: '/about', component: About},
 
         { path:'/testimonial',component:Testimonial},
 

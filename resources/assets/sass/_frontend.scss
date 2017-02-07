@@ -1,6 +1,7 @@
 @import "includes/var";
 @import "includes/mixins";
 @import "includes/ring";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono|Roboto+Slab');
 
 body {
 	// background: #eee;
@@ -11,6 +12,19 @@ body {
 $primary-color : #1c6804;
 $secondary-color : #ecbc40;
 $alternate-color : #4f3021;
+
+$slab: 'Roboto Slab', serif;
+$mono: 'Roboto Mono', monospace;
+$sans: 'Open Sans', sans-serif;
+
+p, a, body {
+	font-family: $sans;
+}
+
+h1, h2, h3 {
+	font-family: $slab;
+	letter-spacing: 2px;
+}
 
 .pace {
   	-webkit-pointer-events: none;
@@ -24,6 +38,8 @@ $alternate-color : #4f3021;
 .pace-inactive {
   	display: none;
 }
+
+
 
 .pace .pace-progress {
   	background: $primary-color;
@@ -90,8 +106,12 @@ a {
 
 	.logo {
 	    position: absolute;
-	    top: 25px;
+	    top: 0;
 	    left: 7%;
+
+	    img {
+	    	width: 185px;
+	    }
 	}
 	.top-nav {
 		height: 7vh;
@@ -110,6 +130,7 @@ a {
 			a {
 				color: #fff;
 				padding: 15px;
+				font-size: 13px;
 			}
 
 			&:first-child {
@@ -133,6 +154,7 @@ a {
 						color: #fff;
 						display: block;
 						padding: 5px 15px;
+						font-size: 14px;
 						border-radius: 5px;
 						@include vendor(transition, all 0.3s linear);
 
@@ -150,8 +172,10 @@ a {
 		.social-icons {
 			ul {
 				margin: 15px 0 0 15px;
+
 				li {
 					margin-left: 15px;
+
 					a {
 						color: #fff;
 						background: $alternate-color;
@@ -168,8 +192,6 @@ a {
 				}
 			}
 		}
-
-
 	}
 }
 .el-carousel {
@@ -256,7 +278,7 @@ section.intro {
 	.logo-div {
 		position: absolute;
 		left: 50%;
-		transform: translate(-50%, -201%);
+		transform: translate(-50%, -165%);
 	}
 
 	h3 {
@@ -377,11 +399,11 @@ section.gallery {
 		    	font-size: 24px;
 		    	text-transform: uppercase;
 		    	background: rgba(#000, 0.5);
-			    height: 200px;
-			    width: 200px;
+			    height: 100%;
+			    width: 100%;
 			    margin: 0;
 			    @include vendor(clip-path, polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%));
-			    margin-top: 18px;
+			    margin-top: 22px;
 			    font-size: 26px;
 			    line-height: 200px;
 			    text-align: center;
@@ -465,7 +487,7 @@ section.gallery {
 
 
 section.facts {
-	min-height: 120vh;
+	min-height: 150vh;
 	background: url('../images/img16.jpg');
 	background-position: center;
 	position: relative;
