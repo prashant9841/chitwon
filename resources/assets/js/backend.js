@@ -58,7 +58,7 @@ const user = Vue.component('user', require('./components/backend/user.vue'));
 
 
 const router = new VueRouter({
-history:true,
+    history:true,
     mode:'history',
 
     routes: [
