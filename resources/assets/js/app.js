@@ -83,14 +83,14 @@ const router = new VueRouter({
         { path: '/pages/:id', component: InnerPage },
 
         { path: '/', component:Home},
-<<<<<<< HEAD
+
         {path:'/login', component:loginForm},
         {path:'/admin',
             beforeEnter: (to, from, next) => {
                 next({path: 'dashboard'});
             }
         },
-=======
+
 
         // {path:'/facts',
         //     beforeEnter: (to, from, next) => {
@@ -98,7 +98,7 @@ const router = new VueRouter({
         //     }
         // },
         
->>>>>>> 42116d9260c6ec328dddc666b28521c391bda38d
+
 
         { path: '/facts', component: Facts},
         

@@ -29,7 +29,7 @@
             <img src="frontend/images/logo.png" alt="">
         </div>
         <div class="navs">
-            {{--<menu-bar></menu-bar>--}}
+            <menu-bar></menu-bar>
         </div>
     </div>
 
