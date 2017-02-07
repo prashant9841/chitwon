@@ -9,7 +9,7 @@
 
 <script>
 
-import {ElMenu,ElMenuItem } from 'element-ui';
+// import {ElMenu,ElMenuItem } from 'element-ui';
 
     export default{
        data() {
@@ -33,7 +33,7 @@ import {ElMenu,ElMenuItem } from 'element-ui';
 			    }
 			},
 		components:{
-			    'el-menu':ElMenu, 'el-menu-item':ElMenuItem
+			    // 'el-menu':ElMenu, 'el-menu-item':ElMenuItem
 			}
 
     }
