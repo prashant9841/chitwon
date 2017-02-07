@@ -25,7 +25,16 @@ import VueRouter from 'vue-router';
 
 
 Vue.use(VueRouter);
+const Welcome = Vue.component('welcome',{
+    template:`  <div class="welcome">
+            <h1>Welcome <span>To Axle</span></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo corrupti molestias obcaecati delectus, labore, odit aperiam commodi rerum tempore fuga. Debitis natus voluptate, pariatur omnis.</p>
+            <el-button><router-link to="/dashboard/events">Start Project</router-link></el-button>
+    <router-view></router-view>
 
+        </div>
+`
+});
 
 /*
 -------------------------------------------------
@@ -34,43 +43,32 @@ Vue.use(VueRouter);
 #################################################
 -------------------------------------------------
 */
-//Testing purposes only
-const PassportC = Vue.component(
-    'passport-clients',
-    require('./components/passport/Clients.vue')
-);
 
-const PassportAC = Vue.component(
-    'passport-authorized-clients',
-    require('./components/passport/AuthorizedClients.vue')
-);
-
-const PassportAT = Vue.component(
-    'passport-personal-access-tokens',
-    require('./components/passport/PersonalAccessTokens.vue')
-);
 // Remove test
-
 const Notifications = Vue.component('notifications', require('./components/backend/notifications.vue'));
 const menuBar = Vue.component('menu-bar', require('./components/backend/menuBar.vue'));
 const messages = Vue.component('messages', require('./components/backend/messages.vue'));
 const user = Vue.component('user', require('./components/backend/user.vue'));
+const loginForm = Vue.component('login-form', require('./components/backend/loginForm.vue'));
+const event = Vue.component('event', require('./components/backend/event.vue'));
+const imageUpload = Vue.component('imgupload', require('./components/backend/sub-components/imageUpload.vue'));
 
 
 const router = new VueRouter({
     history:true,
     mode:'history',
-
     routes: [
-        { path: '/dashboard', component: PassportAC },
-        { path: '/dashboard/user', component: PassportC},
+        { path: '/dashboard', component: Welcome },
+        { path: '/dashboard/events', component: event},
+        { path: '/dashboard/users', component: user},
+        { path: '/dashboard/posts', component: event},
+        { path: '/dashboard/pages', component: event},
+        { path: '/dashboard/options', component: event},
+        { path: '/dashboard/login', component: loginForm},
     ]
 })
 
 //Router Mounted
 const backend = new Vue({
     router
-
-
-
 }).$mount('#backend');

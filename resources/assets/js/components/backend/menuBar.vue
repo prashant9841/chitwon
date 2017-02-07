@@ -1,7 +1,7 @@
 <template>
     <div>
         <el-menu theme="dark" default-active="1" class="el-menu-demo" mode="vertical" @select="handleSelect">
-            <el-menu-item :index="menu.index" v-for="menu in menus"><a :href="menu.link" >{{menu.name}}</a></el-menu-item>
+            <el-menu-item :index="menu.index" v-for="menu in menus"><router-link :to="menu.link" >{{menu.name}}</router-link></el-menu-item>
 
         </el-menu>
     </div>
@@ -15,11 +15,11 @@
        data() {
 			  return {
 			    menus: [
-			      { name: 'Home',link: 'index.php', index: '1'},
-			      { name: 'AllUsers', link: 'users.php', index: '1.1'},
-			      { name: 'taso', link: 'Paso', index: '1.2'},
-			      { name: 'Laso', link: 'Paso', index: '2'},
-			      { name: 'Paso', link: 'Paso', index: '2.1'},
+			      { name: 'Dashboard',link: '/dashboard', index: '1'},
+			      { name: 'Pages', link: '/dashboard/pages', index: '1.1'},
+			      { name: 'Post', link: '/dashboard/posts', index: '1.2'},
+			      { name: 'Media', link: '/dashboard/gallery', index: '2'},
+			      { name: 'Events', link: '/dashboard/events', index: '2.1'},
 			      { name: 'taso', link: 'Paso', index: '3'},
 			      { name: 'Laso', link: 'Paso', index: '3.1'},
 			      { name: 'Paso', link: 'Paso', index: '3.1.1'},

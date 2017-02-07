@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import {ElForm} from 'element-ui'
+//import {ElForm} from 'element-ui'
     export default{
         data(){
             return {
@@ -61,7 +61,7 @@ import {ElForm} from 'element-ui'
 		      }
 	    	},
 	    	components:{
-	    	ElForm
+	    	//ElForm
 	    	}
     }
 </script>
