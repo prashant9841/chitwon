@@ -1,0 +1,98 @@
+
+section.about{
+	margin: 20px auto;
+	width:90%;
+	.aboutPart{
+		float: left;
+		width: 59%;
+		
+	}
+	.commentPart{
+		float: right;
+		width: 38%;
+	}
+	.imageWrapper{
+		-webkit-box-shadow: -1px 0px 5px 0.5px rgba(204,204,204,1);
+		-moz-box-shadow: -1px 0px 5px 0.5px rgba(204,204,204,1);
+		box-shadow: -1px 0px 5px 0.5px rgba(204,204,204,1);
+		border: 1px solid #ccc;
+		width: 100%; 
+		padding: 5px;
+		margin: 0;
+		img{
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.voiceWrapper{
+		overflow: hidden;
+		height: 105px;
+		margin-bottom: 10px;
+	}
+	.messageHeader{
+		margin: 0 0 10px 0;
+		color: #fff;
+		padding: 10px 0 10px 10px; 
+		background-color: #1c6804;
+	}
+	.empolyeeImage{
+		float: left;
+		width: 25%;
+		border:1px solid #ccc;
+		img{
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.voiceDetails{
+		width:72%;
+		float: right;
+		color: #666;
+		h3{
+			padding: 0;
+			margin: 0;
+		}
+		h5{
+			padding: 0;
+			margin: 0;
+		}
+		.empMessage{
+			margin-top:10px;
+		}
+	}
+	.messageDiv{
+		padding:0px 10px;
+		margin-top:10px;
+		border-bottom: 1px solid #ccc;
+		transition: 1s;
+		h3{
+			color: #0190fe;
+			padding: 0;
+			margin: 0;
+		}
+		h4{
+			color: #fb5946;
+			padding: 0;
+			margin: 0;
+		}
+		p{
+			margin: 0;
+			padding: 5px 15px;
+		}
+		.mail{
+			text-decoration: underline;
+			font-style: normal;
+		}
+	}
+	.messageForm{
+		margin-top:10px;
+	}
+
+}
+.c{
+	clear: both;
+}
