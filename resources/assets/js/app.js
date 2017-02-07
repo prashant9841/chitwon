@@ -87,17 +87,16 @@ const router = new VueRouter({
 
         { path: '/', component:Home},
 
-        {path:'/facts',
-            beforeEnter: (to, from, next) => {
-                next({path: 'about'});
-            }
-        },
-        /*{ path: '/facts', component: Facts},*/
+        // {path:'/facts',
+        //     beforeEnter: (to, from, next) => {
+        //         next({path: 'about'});
+        //     }
+        // },
+        
 
         { path: '/facts', component: Facts},
         
         { path: '/about', component: About},
-
 
         { path:'/testimonial',component:Testimonial},
 
