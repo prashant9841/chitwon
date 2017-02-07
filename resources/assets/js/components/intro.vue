@@ -2,7 +2,7 @@
 	<section class="intro">
    		<div class="wrap">
 	   		<div class="logo-div">
-	   			<img src="images/logo.png" alt="">
+	   			<img src="frontend/images/logo.png" alt="">
 	   		</div>
 	   		<h3>{{ title }}</h3>	
 			<p>{{description}}</p>
