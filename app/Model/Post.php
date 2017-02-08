@@ -27,7 +27,7 @@ class Post extends Model implements HasMediaConversions
 	{
 		$this->addMediaConversion('thumb')
 			->setManipulations(['w' => 320, 'h' => 200])
-			->performOnCollections('images');
+			->performOnCollections('post');
 	}
 }
 
