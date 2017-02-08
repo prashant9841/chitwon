@@ -18,6 +18,7 @@ class UserTransformer extends Fractal\TransformerAbstract
             'id' => (int)$user->id,
             'name' => $user->name,
             'email' => $user->email,
+            'created_at' => $user->created_at,
             'links' => [
                 'rel' => 'self',
                 'url' => 'api/v1/user?id=' . $user->id

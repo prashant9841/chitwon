@@ -50,6 +50,9 @@ const menuBar = Vue.component('menu-bar', require('./components/backend/menuBar.
 const messages = Vue.component('messages', require('./components/backend/messages.vue'));
 const user = Vue.component('user', require('./components/backend/user.vue'));
 const allUser = Vue.component('users', require('./components/backend/allUser.vue'));
+const allPosts = Vue.component('all-posts', require('./components/backend/posts.vue'));
+const allMedia = Vue.component('all-media', require('./components/backend/media.vue'));
+const allPages = Vue.component('all-pages', require('./components/backend/pages.vue'));
 const loginForm = Vue.component('login-form', require('./components/backend/loginForm.vue'));
 const event = Vue.component('event', require('./components/backend/event.vue'));
 const imageUpload = Vue.component('imgupload', require('./components/backend/sub-components/imageUpload.vue'));
@@ -63,8 +66,9 @@ const router = new VueRouter({
         { path: '/dashboard/users', component: allUser },
         { path: '/dashboard/events', component: event},
         { path: '/dashboard/users', component: user},
-        { path: '/dashboard/posts', component: event},
-        { path: '/dashboard/pages', component: event},
+        { path: '/dashboard/posts', component: allPosts},
+        { path: '/dashboard/pages', component: allPages},
+        { path: '/dashboard/gallery', component: allMedia},
         { path: '/dashboard/options', component: event},
         { path: '/dashboard/login', component: loginForm},
     ]

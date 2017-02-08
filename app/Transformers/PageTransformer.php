@@ -17,6 +17,7 @@ class PageTransformer extends Fractal\TransformerAbstract
         return [
             'id' => (int)$page->id,
             'title' => $page->title,
+            'slug' => $page->slug,
             'description' => $page->description,
             'links' => [
                 'rel' => 'self',
