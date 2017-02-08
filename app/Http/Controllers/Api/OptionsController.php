@@ -48,7 +48,7 @@ class OptionsController extends ApiController
         return [
             'label' => $request->label,
             'value' => $request->value,
-//            475
+
         ];
     }
 

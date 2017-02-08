@@ -27,7 +27,7 @@
     </div>--}}
     <div class="side-nav">
         <div class="logo-div">
-            <img src="frontend/images/logo.png" alt="">
+            <img src="/frontend/images/logo.png" alt="">
         </div>
         <div class="navs">
             <menu-bar></menu-bar>

@@ -1,8 +1,15 @@
 <template>
-    <el-table :data="users"style="width: 100%">
-        <el-table-column prop="email" label="eMail"></el-table-column>
-        <el-table-column prop="name" label="Name"></el-table-column>
-        <el-table-column prop="created_at.date" label="Creation Date"></el-table-column>
+    <el-table :data="posts"style="width: 100%">
+        <el-table-column prop="title" label="Title"></el-table-column>
+        <el-table-column prop="excerpt" label="Experct"></el-table-column>
+        <el-table-column prop="published_on.date" label="Published_on"></el-table-column>
+        <el-table-column label="Images">
+            <template scope="scope" v-if="Object.keys(posts.media).length">
+                <div v-for="image in posts.media">
+                    <img :src="image.src">
+                </div>
+            </template>
+        </el-table-column>
         <el-table-column  fixed="right" label="Operations" width="120">
             <template scope="scope">
                 <el-button @click="handleClick" type="text" size="small"><a>Detail</a></el-button>
@@ -16,7 +23,7 @@
     export default{
         data(){
             return {
-              users: []
+              posts: []
             }
         },
         /**
@@ -38,28 +45,29 @@
         },
         methods: {
             prepareComponent(){
-                this.getUsers();
+                this.getPosts();
             },
             handleClick() {
                 if (this.active++ > 2) this.active = 0;
             },
-            getUsers(){
-              this.$http.get('/api/v1/users')
+            getPosts(){
+              this.$http.get('/api/v1/posts?include=media')
                         .then(response => {
                             var data = response.data;
                             //Getting the data:
-                            this.users = data.data;
+                            this.posts = data.data;
+                            console.log(this.posts);
                         });
             },
             removeUsers(id){
-              this.$http.delete('/api/v1/users/'+id)
+              this.$http.delete('/api/v1/posts/'+id)
                         .then(response => {
                             response.data;
                             //TODO:: Add effects of removing the data
                         });
             },
             updateUsers(id){
-              this.$http.put('/api/v1/users/'+id)
+              this.$http.put('/api/v1/posts/'+id)
                         .then(response => {
                             response.data;
                             //TODO:: Add effects of removing the data
