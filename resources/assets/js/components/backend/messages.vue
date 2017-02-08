@@ -3,7 +3,7 @@
     <div class="messages">
         <el-dropdown  trigger="click">
             <p type="primary">
-                <i class="ti-bell"></i>
+                <i class="ti-email"></i>
             </p>
             <el-dropdown-menu slot="dropdown">
                 <el-dropdown-item v-for="message in messages">

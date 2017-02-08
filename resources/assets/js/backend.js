@@ -49,6 +49,7 @@ const Notifications = Vue.component('notifications', require('./components/backe
 const menuBar = Vue.component('menu-bar', require('./components/backend/menuBar.vue'));
 const messages = Vue.component('messages', require('./components/backend/messages.vue'));
 const user = Vue.component('user', require('./components/backend/user.vue'));
+const allUser = Vue.component('users', require('./components/backend/allUser.vue'));
 const loginForm = Vue.component('login-form', require('./components/backend/loginForm.vue'));
 const event = Vue.component('event', require('./components/backend/event.vue'));
 const imageUpload = Vue.component('imgupload', require('./components/backend/sub-components/imageUpload.vue'));
@@ -59,6 +60,7 @@ const router = new VueRouter({
     mode:'history',
     routes: [
         { path: '/dashboard', component: Welcome },
+        { path: '/dashboard/users', component: allUser },
         { path: '/dashboard/events', component: event},
         { path: '/dashboard/users', component: user},
         { path: '/dashboard/posts', component: event},
@@ -72,3 +74,9 @@ const router = new VueRouter({
 const backend = new Vue({
     router
 }).$mount('#backend');
+
+$('.toggle-nav').on('click', function(event) {
+    event.preventDefault();
+    $('.side-nav').toggleClass('hide');
+    $('#main-content').toggleClass('hide');
+});
