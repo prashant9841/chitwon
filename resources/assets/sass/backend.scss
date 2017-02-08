@@ -77,7 +77,14 @@ a {
     }
   }
 }
-
+.side-nav.hide {
+  transform: translateX(-100%) !important;
+  height: 0;
+  display: none;
+}
+#main-content.hide {
+  width: 100%;
+}
 
 #main-content {
   width: 80%;

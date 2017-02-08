@@ -16,6 +16,7 @@
 			  return {
 			    menus: [
 			      { name: 'Dashboard',link: '/dashboard', index: '1'},
+			      { name: 'Users',link: '/dashboard/users', index: '1'},
 			      { name: 'Pages', link: '/dashboard/pages', index: '1.1'},
 			      { name: 'Post', link: '/dashboard/posts', index: '1.2'},
 			      { name: 'Media', link: '/dashboard/gallery', index: '2'},
