@@ -1,4 +1,5 @@
 import VueRouter from 'vue-router';
+
 //import PulseLoader from 'vue-spinner/src/PulseLoader.vue';
 
 // import * as VueGoogleMaps from 'vue2-google-maps';
@@ -64,6 +65,7 @@ const Testimonial = Vue.component('testimonial', require('./components/testimoni
 const contactInfo = Vue.component('contact-info', require('./components/contactInfo.vue'));
 const contactForm = Vue.component('contact-form', require('./components/contactForm.vue'));
 const loginForm = Vue.component('login-form',require('./components/backend/loginForm.vue'));
+
 // const googleMap = Vue.component('google-map', require('./components/map.vue'));
 /*
 ---------------------------------------------------------
@@ -116,6 +118,8 @@ const router = new VueRouter({
         { path: '/upload', component: Vue.component('upload', require('./components/Upload.vue'))},
         { path: '/passport', component: Pages},
         { path: '*', component: NotFound},
+
+
     ]
 
 })

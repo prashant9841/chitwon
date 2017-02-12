@@ -51,6 +51,7 @@ const messages = Vue.component('messages', require('./components/backend/message
 const user = Vue.component('user', require('./components/backend/user.vue'));
 const profile = Vue.component('profile', require('./components/backend/profile.vue'));
 const profileEdit = Vue.component('profile-edit', require('./components/backend/profileEdit.vue'));
+const ProfileSideMenu = Vue.component('profile-SideMenu', require('./components/backend/profileSideMenu.vue'));
 const settings = Vue.component('settings', require('./components/backend/settings.vue'));
 const allUser = Vue.component('users', require('./components/backend/allUser.vue'));
 const allPosts = Vue.component('all-posts', require('./components/backend/posts.vue'));
