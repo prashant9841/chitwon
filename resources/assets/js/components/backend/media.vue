@@ -1,4 +1,7 @@
 <template>
+<div class="">
+    <bread-crumb :links="breadcrumb"></bread-crumb>
+    <dashboard-title title="All Images" button="Add image" link="/dashboard/gallery/add"></dashboard-title>
     <el-table :data="galleries"style="width: 100%">
         <el-table-column prop="thumb" label="Thumbnail"></el-table-column>
         <el-table-column prop="file_name" label="File Name"></el-table-column>
@@ -13,13 +16,15 @@
             </template>
         </el-table-column>
     </el-table>
+</div>
 </template>
 
 <script>
     export default{
         data(){
             return {
-              galleries: []
+              galleries: [],
+              breadcrumb:[]
             }
         },
         /**
@@ -42,7 +47,22 @@
         methods: {
             prepareComponent(){
                 this.getImages();
+                this.getBreadCrumb();
             },
+
+            getBreadCrumb(){
+                this.breadcrumb= [
+                    {
+                      title:'Dashboard',
+                      link: '/dashboard/'   
+                    },
+                    {
+                      title:'Gallery',
+                      link: '/dashboard/gallery'   
+                    }
+                ]
+            },
+            
             handleClick() {
                 if (this.active++ > 2) this.active = 0;
             },

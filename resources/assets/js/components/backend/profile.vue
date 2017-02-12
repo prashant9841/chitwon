@@ -1,5 +1,6 @@
 <template>
 	<div class="user-profile">
+	<bread-crumb :links="breadcrumb"></bread-crumb>
 		<el-row :gutter="20">
 			<el-col :span="6">
 				<el-card class="box-card">				  	
@@ -37,13 +38,39 @@ import SideMenuProfile from './profileSideMenu.vue'
 		components: {SideMenuProfile},
 		data() {
 			return {
-				user:{
-					name: 'User Name',
-					image: '/frontend/images/logo.png',
-					email: 'info@domain.com',
-					phone: '98XXXXXXXXX'
-				}
+				user:[],
+				breadcrumb:[]
 			}
+		},
+		mounted(){
+			this.prepareComponent();
+		},
+		methods:{
+			prepareComponent(){
+				this.getProfile()
+				this.getBreadCrumb()
+
+			},
+
+			getProfile(){
+				this.$http.get('/users/current')
+				.then(response => {
+                        this.user = response.data.data;
+                        
+                    });
+			},
+			getBreadCrumb(){
+                this.breadcrumb= [
+                    {
+                      title:'Dashboard',
+                      link: '/dashboard/'   
+                    },
+                    {
+                      title:'Profile',
+                      link: '/dashboard/profile'   
+                    }
+                ]
+            },
 		}
 	}
 </script>
