@@ -17,7 +17,7 @@
         dialogVisible: false,
         trigger: 'Model',
         modalTitle: 'Modal title'
-      };
+      }
     }
   };
 </script>
