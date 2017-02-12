@@ -89,7 +89,7 @@ const router = new VueRouter({
         {path:'/login', component:loginForm},
         {path:'/admin',
             beforeEnter: (to, from, next) => {
-                next({path: 'dashboard'});
+                window.location = window.location.hostname+'/dashboard'
             }
         },
 

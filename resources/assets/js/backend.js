@@ -5,6 +5,10 @@ window.$ = window.jQuery = require('jquery');
 
 window.Vue = require('vue');
 
+import VueRouter from 'vue-router';
+Vue.use(VueRouter);
+//
+
 require('vue-resource');
 
 require('element-ui');
@@ -20,11 +24,8 @@ Vue.http.interceptors.push((request, next) => {
 });
 
 
-import VueRouter from 'vue-router';
 
 
-
-Vue.use(VueRouter);
 const Welcome = Vue.component('welcome',{
     template:`  <div class="welcome">
             <h1>Welcome <span>To Axle</span></h1>
@@ -55,6 +56,7 @@ const allMedia = Vue.component('all-media', require('./components/backend/media.
 const allPages = Vue.component('all-pages', require('./components/backend/pages.vue'));
 const loginForm = Vue.component('login-form', require('./components/backend/loginForm.vue'));
 const event = Vue.component('event', require('./components/backend/event.vue'));
+const editor = Vue.component('editors', require('./components/backend/editor.vue'));
 const imageUpload = Vue.component('imgupload', require('./components/backend/sub-components/imageUpload.vue'));
 
 
@@ -70,6 +72,7 @@ const router = new VueRouter({
         { path: '/dashboard/pages', component: allPages},
         { path: '/dashboard/gallery', component: allMedia},
         { path: '/dashboard/options', component: event},
+        { path: '/dashboard/editor', component: editor},
         { path: '/dashboard/login', component: loginForm},
     ]
 })
