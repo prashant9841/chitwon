@@ -25,16 +25,6 @@ import VueRouter from 'vue-router';
 
 
 Vue.use(VueRouter);
-const Welcome = Vue.component('welcome',{
-    template:`  <div class="welcome">
-            <h1>Welcome <span>To Axle</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo corrupti molestias obcaecati delectus, labore, odit aperiam commodi rerum tempore fuga. Debitis natus voluptate, pariatur omnis.</p>
-            <el-button><router-link to="/dashboard/events">Start Project</router-link></el-button>
-    <router-view></router-view>
-
-        </div>
-`
-});
 
 /*
 -------------------------------------------------
@@ -49,6 +39,7 @@ const Notifications = Vue.component('notifications', require('./components/backe
 const menuBar = Vue.component('menu-bar', require('./components/backend/menuBar.vue'));
 const messages = Vue.component('messages', require('./components/backend/messages.vue'));
 const user = Vue.component('user', require('./components/backend/user.vue'));
+const Welcome = Vue.component('welcome', require('./components/backend/dashboard.vue'));
 const profile = Vue.component('profile', require('./components/backend/profile.vue'));
 const profileEdit = Vue.component('profile-edit', require('./components/backend/profileEdit.vue'));
 const settings = Vue.component('settings', require('./components/backend/settings.vue'));
