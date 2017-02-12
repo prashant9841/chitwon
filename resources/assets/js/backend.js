@@ -56,7 +56,9 @@ const allPages = Vue.component('all-pages', require('./components/backend/pages.
 const loginForm = Vue.component('login-form', require('./components/backend/loginForm.vue'));
 const event = Vue.component('event', require('./components/backend/event.vue'));
 const imageUpload = Vue.component('imgupload', require('./components/backend/sub-components/imageUpload.vue'));
-
+const dashboardTitle = Vue.component('dashboard-title', require('./components/backend/sub-components/dashboardTitle.vue'));
+const breadCrumb = Vue.component('bread-crumb', require('./components/backend/sub-components/breadCrumb.vue'));
+const modal = Vue.component('modal', require('./components/backend/sub-components/modal.vue'));
 
 const router = new VueRouter({
     history:true,

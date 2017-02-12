@@ -1,22 +1,27 @@
 <template>
-    <el-table :data="posts"style="width: 100%">
-        <el-table-column prop="title" label="Title"></el-table-column>
-        <el-table-column prop="excerpt" label="Experct"></el-table-column>
-        <el-table-column prop="published_on.date" label="Published_on"></el-table-column>
-        <el-table-column label="Images">
-            <template scope="scope" v-if="Object.keys(posts.media).length">
-                <div v-for="image in posts.media">
-                    <img :src="image.src">
-                </div>
-            </template>
-        </el-table-column>
-        <el-table-column  fixed="right" label="Operations" width="120">
-            <template scope="scope">
-                <el-button @click="handleClick" type="text" size="small"><a>Detail</a></el-button>
-                <el-button type="text" size="small">Edit</el-button>
-            </template>
-        </el-table-column>
-    </el-table>
+    <div class="">
+       <bread-crumb></bread-crumb>
+       <dashboard-title title="All Posts"></dashboard-title>
+        <el-table :data="posts"style="width: 100%">
+            <el-table-column prop="title" label="Title"></el-table-column>
+            <el-table-column prop="excerpt" label="Experct"></el-table-column>
+            <el-table-column prop="published_on.date" label="Published_on"></el-table-column>
+            <el-table-column label="Images">
+                <template scope="scope" v-if="Object.keys(posts.media).length">
+                    <div v-for="image in posts.media">
+                        <img :src="image.src">
+                    </div>
+                </template>
+            </el-table-column>
+            <el-table-column  fixed="right" label="Operations" width="120">
+                <template scope="scope">
+                    <el-button @click="handleClick" type="text" size="small"><a>Detail</a></el-button>
+                    <el-button type="text" size="small">Edit</el-button>
+                </template>
+            </el-table-column>
+        </el-table>
+        
+    </div>
 </template>
 
 <script>

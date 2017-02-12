@@ -159,6 +159,20 @@ a {
       }
     }
   }
+
+  .bread-crumb {
+
+    padding: 25px 0;
+    margin-left: -10%;
+    .el-breadcrumb {
+      font-size: 13px;
+      text-transform: capitalize;
+    }
+
+    .el-breadcrumb:before {
+      content: none;
+    }
+  }
 }
 
 .el-dropdown-menu {
@@ -168,4 +182,22 @@ a {
 .el-row {
   width: 96%;
   margin: 0 auto !important;
+}
+
+.router-view {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 35px 0;
+  margin-bottom: 35px;
+  h3, h1, h2, h4 {
+    float: left;
+    font-size: 32px;
+    margin: 0;
+  }
+  .el-button {
+    float: right;
+  }
 }
