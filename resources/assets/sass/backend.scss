@@ -106,6 +106,7 @@ a {
     .toggle-nav {
       float: left;
       padding: 11px;
+      cursor: pointer;
     }
 
     ul.right {
@@ -181,11 +182,11 @@ a {
 
 .el-row {
   width: 96%;
-  margin: 0 auto !important;
+  margin: 20px auto !important;
 }
 
 .router-view {
-  width: 80%;
+  width: 94%;
   margin: 0 auto;
 }
 
@@ -199,5 +200,32 @@ a {
   }
   .el-button {
     float: right;
+  }
+}
+
+.user-profile {
+  .navs {
+    ul {
+      padding: 0;
+
+      li {
+        a {
+          color: #5a5a5a;
+          display: block;
+          padding: 10px;
+
+          &:hover {
+            color: #fff;
+            background: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.el-card {
+  .card-head {
+    text-align: center;
   }
 }
