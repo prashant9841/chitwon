@@ -9,7 +9,7 @@
 					<li><a href="#">About Us</a></li>
 					<li><a href="#">About Us</a></li>
 					<li><a href="#">About Us</a></li>
-					<li><a href="#">About <Us></Us></a></li>
+					<li><a href="#">About </a></li>
 				</el-card>
         	</el-col>
         	<el-col :span="8">
@@ -18,7 +18,7 @@
 					<li><a href="#">About Us</a></li>
 					<li><a href="#">About Us</a></li>
 					<li><a href="#">About Us</a></li>
-					<li><a href="#">About <Us></Us></a></li>
+					<li><a href="#">About </a></li>
 				</el-card>
         	</el-col>
         	<el-col :span="8">
@@ -27,7 +27,7 @@
 					<li><a href="#">About Us</a></li>
 					<li><a href="#">About Us</a></li>
 					<li><a href="#">About Us</a></li>
-					<li><a href="#">About <Us></Us></a></li>
+					<li><a href="#">About </a></li>
 				</el-card>
         	</el-col>
         </el-row>
