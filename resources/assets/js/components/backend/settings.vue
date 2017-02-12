@@ -7,13 +7,8 @@
 				  		<img :src="user.image" alt="">
 				  		<h3>{{user.name}}</h3>
 				  	</div>
-				  	<div class="navs">
-				  		<ul>
-				  			<li><a href="/dashboard/profile">Profile</a></li>
-				  			<li><a href="/dashboard/profile/edit">Edit Profile</a></li>
-				  			<li><a href="/dashboard/profile/settings">Settings</a></li>
-				  		</ul>
-				  	</div>
+				  	<!-- profile sidebar -->
+					<profile-SideMenu></profile-SideMenu>
 				</el-card>
 			</el-col>
 		    <el-col :span="18">
@@ -35,7 +30,7 @@
 						    <el-input type="password" v-model="ruleForm2.checkPass" auto-complete="off"></el-input>
 						  </el-form-item>
 						  <el-form-item>
-						    <el-button type="primary" @click="submitForm('ruleForm2')">Submit</el-button>
+						    <el-button type="primary" @click="submitForm('ruleForm2')">Submits</el-button>
 						    <el-button @click="resetForm('ruleForm2')">Reset</el-button>
 						  </el-form-item>
 						</el-form>
@@ -49,7 +44,11 @@
 </template>
 
 <script>
+import SideMenuProfile from './profileSideMenu.vue'
+
 	export default {
+		name: 'profileedit',
+		components: {SideMenuProfile},
 		data() {
 			return {
 				user:{
@@ -60,8 +59,8 @@
 				},
 				ruleForm2: {
 					oldpass: '',
-		          pass: '',
-		          checkPass: ''
+			        pass: '',
+			        checkPass: ''
 		        },
 		        rules2: {
 		          oldpass: [
@@ -96,10 +95,20 @@
 		    };
 		},
 		methods: {
-	      submitForm(formName) {
-	        this.$refs[formName].validate((valid) => {
+	      submitForm(ruleForm2) {
+	        this.$refs[ruleForm2].validate((valid) => {
 	          if (valid) {
-	            alert('submit!');
+	            	var _pass = this.ruleForm2.pass;
+	            	var _checkPass = this.ruleForm2.checkPass;
+	            	if(_pass != _checkPass)
+	            	{
+		            	this.$message({message: "Password didnot match", type: 'error'});
+		            	return false;
+	           		}
+	           		else{
+	           			this.$message({message: 'Password successfully changed', type: 'success'})
+	           		}
+	            
 	          } else {
 	            console.log('error submit!!');
 	            return false;

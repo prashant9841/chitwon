@@ -7,13 +7,8 @@
 				  		<img :src="user.image" alt="">
 				  		<h3>{{user.name}}</h3>
 				  	</div>
-				  	<div class="navs">
-				  		<ul>
-				  			<li><a href="/dashboard/profile">Profile</a></li>
-				  			<li><a href="/dashboard/profile/edit">Edit Profile</a></li>
-				  			<li><a href="/dashboard/profile/settings">Settings</a></li>
-				  		</ul>
-				  	</div>
+				  	<!-- profile sidebar -->
+					<profile-SideMenu></profile-SideMenu>
 				</el-card>
 			</el-col>
 		    <el-col :span="18">
@@ -36,7 +31,10 @@
 </template>
 
 <script>
+import SideMenuProfile from './profileSideMenu.vue'
 	export default {
+		name: 'profile',
+		components: {SideMenuProfile},
 		data() {
 			return {
 				user:{

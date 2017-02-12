@@ -32,7 +32,7 @@
 			<span v-for="item in messageData">
 			<div class="messageDiv">
 				<h3> Name: {{ item.name }} </h3>
-				<h4> E-mail: <label> class="mail">{{ item.email }}</label></h4>
+				<h4> E-mail: <label class="mail"> {{ item.email }} </label> </h4>
 				<p> {{ item.message }} </p>
 			</div>
 			</span>
