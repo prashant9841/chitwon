@@ -1,16 +1,20 @@
 <template>
-    <el-table :data="pages"style="width: 100%">
-        <el-table-column prop="title" label="Title"></el-table-column>
-        <el-table-column prop="slug" label="Slug"></el-table-column>
-        <!--<el-table-column prop="published_on.date" label="Published_on"></el-table-column>-->
-        <el-table-column  label="Posts">{{posts}}</el-table-column>
-        <el-table-column  fixed="right" label="Operations" width="120">
-            <template scope="scope">
-                <el-button @click="handleClick" type="text" size="small"><a>Detail</a></el-button>
-                <el-button type="text" size="small">Edit</el-button>
-            </template>
-        </el-table-column>
-    </el-table>
+    <div class="">
+        <bread-crumb></bread-crumb>
+        <dashboard-title title="All Posts" button="add a page"></dashboard-title>
+        <el-table :data="pages"style="width: 100%">
+            <el-table-column prop="title" label="Title"></el-table-column>
+            <el-table-column prop="slug" label="Slug"></el-table-column>
+            <!--<el-table-column prop="published_on.date" label="Published_on"></el-table-column>-->
+            <el-table-column  label="Posts">{{posts}}</el-table-column>
+            <el-table-column  fixed="right" label="Operations" width="120">
+                <template scope="scope">
+                    <el-button @click="handleClick" type="text" size="small"><a>Detail</a></el-button>
+                    <el-button type="text" size="small">Edit</el-button>
+                </template>
+            </el-table-column>
+        </el-table>
+    </div>
 </template>
 
 <script>

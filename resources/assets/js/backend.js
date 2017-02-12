@@ -26,6 +26,7 @@ Vue.http.interceptors.push((request, next) => {
 
 
 
+
 const Welcome = Vue.component('welcome',{
     template:`  <div class="welcome">
             <h1>Welcome <span>To Axle</span></h1>
@@ -36,6 +37,9 @@ const Welcome = Vue.component('welcome',{
         </div>
 `
 });
+
+
+
 
 /*
 -------------------------------------------------
@@ -50,6 +54,7 @@ const Notifications = Vue.component('notifications', require('./components/backe
 const menuBar = Vue.component('menu-bar', require('./components/backend/menuBar.vue'));
 const messages = Vue.component('messages', require('./components/backend/messages.vue'));
 const user = Vue.component('user', require('./components/backend/user.vue'));
+const Welcome = Vue.component('welcome', require('./components/backend/dashboard.vue'));
 const profile = Vue.component('profile', require('./components/backend/profile.vue'));
 const profileEdit = Vue.component('profile-edit', require('./components/backend/profileEdit.vue'));
 const settings = Vue.component('settings', require('./components/backend/settings.vue'));

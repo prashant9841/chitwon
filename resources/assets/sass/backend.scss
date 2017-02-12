@@ -124,39 +124,39 @@ a {
   }
 
   .welcome {
-    width: 70%;
-    margin: auto;
-    text-align: center;
-    height: 380px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width: 94%;
+    margin: auto; 
 
-
-    h1 {
-      color: $secondary-color;
-
-      span {
-        color: $primary-color;
-      }
-    }
-
-    p {
+    h2 {
+      text-transform: capitalize;
       color: $primary-color;
-      margin: 35px 0;
     }
 
-    button {
+    li {
       a {
-        display: block;
         color: $primary-color;
-        font-size: 22px;
+        display: block;
+        border-bottom: 1px solid #ccc;
+        padding: 5px;
+
+        &:hover {
+          color: #fff;
+          background: $primary-color;
+        }
       }
 
-      &:hover {
-        a {color: $secondary-color;}
+      &:last-child {
+        a {border-bottom: none;}
+      }
+    }
+
+    .small-boxes {
+      margin-top: 50px;
+      a {
+        font-size: 18px;
+        color: $primary-color;
+        display: block;
+        text-align: center;
       }
     }
   }
@@ -164,7 +164,6 @@ a {
   .bread-crumb {
 
     padding: 25px 0;
-    margin-left: -10%;
     .el-breadcrumb {
       font-size: 13px;
       text-transform: capitalize;
@@ -180,10 +179,23 @@ a {
   margin-top: -8px;
 }
 
-.el-row {
-  width: 96%;
-  margin: 20px auto !important;
+.label {
+    position: absolute;
+    top: 7px;
+    right: -7px;
+    background: $primary-color + 50;
+    line-height: 15px;
+    width: 15px;
+    text-align: center;
+    height: 15px;
+    border-radius: 15px;
+    border: $primary-color solid 1px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
 }
+
+
 
 .router-view {
   width: 94%;
@@ -197,6 +209,7 @@ a {
     float: left;
     font-size: 32px;
     margin: 0;
+    color: $primary-color;
   }
   .el-button {
     float: right;
@@ -204,6 +217,13 @@ a {
 }
 
 .user-profile {
+
+  img {
+    width: 100%;
+  }
+  h3 {
+    text-align: center;
+  }
   .navs {
     ul {
       padding: 0;
