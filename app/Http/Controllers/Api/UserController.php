@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-
+use Auth;
 use App\Model\User;
 use App\Transformers\UserTransformer;
 use Spatie\Fractalistic\Fractal;
@@ -22,5 +22,14 @@ class UserController
         return Fractal::create()
             ->item(User::findOrFail($id),new UserTransformer())
             ->toArray();
+    }
+
+    public function currentUser()
+    {
+        
+        return Fractal::create()
+            ->item(User::findOrFail(Auth::user()->id),new UserTransformer())
+            ->toArray();
+
     }
 }

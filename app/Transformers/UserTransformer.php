@@ -18,6 +18,7 @@ class UserTransformer extends Fractal\TransformerAbstract
             'id' => (int)$user->id,
             'name' => $user->name,
             'email' => $user->email,
+            'image' => 'http://lorempixel.com/400/200',
             'created_at' => $user->created_at,
             'links' => [
                 'rel' => 'self',

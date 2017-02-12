@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 | to using a Closure or controller method. Build something great!
 |
 */
-
+Route::get('users/current','Api\UserController@currentUser');
 //From SUggestion Matt Staufer
 Route::group(['middleware' => 'auth'], function () {
 

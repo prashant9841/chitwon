@@ -1,6 +1,6 @@
 <template>
     <div class="">
-       <bread-crumb></bread-crumb>
+       <bread-crumb :links="breadcrumb"></bread-crumb>
        <dashboard-title title="All Posts"></dashboard-title>
         <el-table :data="posts"style="width: 100%">
             <el-table-column prop="title" label="Title"></el-table-column>
@@ -28,7 +28,8 @@
     export default{
         data(){
             return {
-              posts: []
+              posts: [],
+              breadcrumb:[]
             }
         },
         /**
@@ -51,7 +52,23 @@
         methods: {
             prepareComponent(){
                 this.getPosts();
+                this.getBreadCrumb();
             },
+
+
+            getBreadCrumb(){
+                this.breadcrumb= [
+                    {
+                      title:'Dashboard',
+                      link: '/dashboard/'   
+                    },
+                    {
+                      title:'Posts',
+                      link: '/dashboard/posts'   
+                    }
+                ]
+            },
+
             handleClick() {
                 if (this.active++ > 2) this.active = 0;
             },
