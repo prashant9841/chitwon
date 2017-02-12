@@ -20,9 +20,9 @@
 			      { name: 'Post', link: '/dashboard/posts', index: '4'},
 			      { name: 'Media', link: '/dashboard/gallery', index: '5'},
 			      { name: 'Events', link: '/dashboard/events', index: '6'},
-			      { name: 'Profile', link: '/dashboard/profile', index: '7'}
-			      { name: 'Users',link: '/dashboard/users', index: '2'},
-			      { name: 'Editor',link: '/dashboard/editor', index: '2'},
+			      { name: 'Profile', link: '/dashboard/profile', index: '7'},
+			      { name: 'Users', link: '/dashboard/users', index: '2'},
+			      { name: 'Editor', link: '/dashboard/editor', index: '2'},
 
 			    ]
 			  }
