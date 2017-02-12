@@ -45,7 +45,7 @@
         	</el-col>
         	<el-col :span="6">
         		<el-card class="box-card">
-					<a href="#">Add a package</a>
+					<a href="#">Social Media Links</a>
 				</el-card>
         	</el-col>
         	<el-col :span="6">
