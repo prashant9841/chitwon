@@ -19,6 +19,8 @@
   "dependencies": {
     "babel-runtime": "^6.22.0",
     "element-ui": "^1.1.6",
+    "node-sass": "^4.5.0",
+    "vue-ckeditor2": "^1.0.3",
     "vue-core-image-upload": "^2.0.1",
     "vue-spinner": "^1.0.2",
     "wowjs": "^1.1.3"
