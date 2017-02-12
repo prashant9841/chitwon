@@ -39,7 +39,7 @@ import SideMenuProfile from './profileSideMenu.vue'
 			return {
 				user:{
 					name: 'User Name',
-					image: 'asdasdasdas',
+					image: '/frontend/images/logo.png',
 					email: 'info@domain.com',
 					phone: '98XXXXXXXXX'
 				}

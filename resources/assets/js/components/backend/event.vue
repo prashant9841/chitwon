@@ -26,7 +26,7 @@
             <el-input placeholder="Description" type="textarea" v-model="form.description">
             </el-input>
         </el-form-item>
-        <imgupload></imgupload>
+       <!-- <imgupload></imgupload>-->
         <el-form-item>
             <el-button type="primary" @click="submitForm('form')">Create</el-button>
             <el-button @click="resetForm('form')">Reset</el-button>
@@ -35,12 +35,10 @@
 </template>
 
 <script>
-    //import {ElButton, ElFormItem,DatePicker,ElForm } from 'element-ui'
-
-    export default{
+export default{
        data() {
 	      return {
-            form: {
+	        form: {
 		        start: '',
 		        end: '',
 	            title: '',
@@ -62,27 +60,31 @@
 	        }
 	      };
 	    },
+	    mounted(){
+             console.log('this is my editor', this.editor);
+	    },
 	    methods: {
-		      submitForm(formName) {
-		        this.$refs[formName].validate((valid) => {
-		          if (valid) {
-		        		this.$message({
-				          message: 'Login Sucess',
-				          type: 'success'
-				        });
-		          } else {
+            submitForm(formName) {
+                this.$refs[formName].validate((valid) => {
+                    if (valid) {
+                    	this.$message({
+                          message: 'Login Sucess',
+                          type: 'success'
+                        });
+                    } else {
 
-				        this.$message({
-				          message: 'Login Failed!',
-				          type: 'error'
-				        });
-		            return false;
-		          }
-		        });
-		      },
-		      resetForm(formName) {
-		        this.$refs[formName].resetFields();
-		      }
-		    }
-    }
+                        this.$message({
+                          message: 'Login Failed!',
+                          type: 'error'
+                        });
+                        return false;
+                    }
+                });
+            },
+            resetForm(formName) {
+                this.$refs[formName].resetFields();
+            },
+	    },
+        
+}
 </script>

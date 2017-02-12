@@ -39,6 +39,7 @@
 
 </div>
 
+<script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 <script src="/js/backend.js" async defer></script>
 </body>
 </html>
