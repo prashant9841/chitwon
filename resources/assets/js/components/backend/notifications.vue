@@ -3,6 +3,7 @@
         <el-dropdown trigger="click">
             <p type="primary">
                 <i class="ti-bell"></i>
+                <span class="label">2</span>
             </p>
             <el-dropdown-menu slot="dropdown">
                 <el-dropdown-item v-for="notification in notifications">
