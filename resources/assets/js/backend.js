@@ -50,6 +50,9 @@ const Notifications = Vue.component('notifications', require('./components/backe
 const menuBar = Vue.component('menu-bar', require('./components/backend/menuBar.vue'));
 const messages = Vue.component('messages', require('./components/backend/messages.vue'));
 const user = Vue.component('user', require('./components/backend/user.vue'));
+const profile = Vue.component('profile', require('./components/backend/profile.vue'));
+const profileEdit = Vue.component('profile-edit', require('./components/backend/profileEdit.vue'));
+const settings = Vue.component('settings', require('./components/backend/settings.vue'));
 const allUser = Vue.component('users', require('./components/backend/allUser.vue'));
 const allPosts = Vue.component('all-posts', require('./components/backend/posts.vue'));
 const allMedia = Vue.component('all-media', require('./components/backend/media.vue'));
@@ -58,7 +61,9 @@ const loginForm = Vue.component('login-form', require('./components/backend/logi
 const event = Vue.component('event', require('./components/backend/event.vue'));
 const editor = Vue.component('editors', require('./components/backend/editor.vue'));
 const imageUpload = Vue.component('imgupload', require('./components/backend/sub-components/imageUpload.vue'));
-
+const dashboardTitle = Vue.component('dashboard-title', require('./components/backend/sub-components/dashboardTitle.vue'));
+const breadCrumb = Vue.component('bread-crumb', require('./components/backend/sub-components/breadCrumb.vue'));
+// const modal = Vue.component('modal', require('./components/backend/sub-components/modal.vue'));
 
 const router = new VueRouter({
     history:true,
@@ -74,6 +79,9 @@ const router = new VueRouter({
         { path: '/dashboard/options', component: event},
         { path: '/dashboard/editor', component: editor},
         { path: '/dashboard/login', component: loginForm},
+        { path: '/dashboard/profile', component: profile},
+        { path: '/dashboard/profile/settings', component: settings},
+        { path: '/dashboard/profile/edit', component: profileEdit}
     ]
 })
 

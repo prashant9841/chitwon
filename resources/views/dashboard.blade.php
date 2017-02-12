@@ -22,7 +22,9 @@
         </div>
 
 {{-- # Till here--}}
-      <router-view></router-view>
+    <div class="router-view">
+      <router-view></router-view>        
+    </div>
 
     </div>
 
