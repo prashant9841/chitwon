@@ -1,7 +1,8 @@
 <template>
 	<div class="header">
         <h3>{{title}}</h3>
-        <a class="el-button" v-if="buttonShow" :href="link">{{button}}</a>   
+        
+        <modal :posts="post" :pages="page" :media="media" :header="modalTitle" :buttonShow="buttonShow"></modal>
     </div>
 </template>
 <script>
@@ -22,6 +23,26 @@
             },
             title:{
                 default: 'Title',
+                required: false,
+                type: [Number,String,Boolean],
+            },
+            post:{
+                default: false,
+                required: false,
+                type: [Number,String,Boolean],
+            },
+            page:{
+                default: false,
+                required: false,
+                type: [Number,String,Boolean],
+            },
+            media:{
+                default: false,
+                required: false,
+                type: [Number,String,Boolean],
+            },
+            modalTitle:{
+                default: 'Add a Page',
                 required: false,
                 type: [Number,String,Boolean],
             },

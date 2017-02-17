@@ -1,7 +1,7 @@
 <template>
     <div class="">
        <bread-crumb :links="breadcrumb"></bread-crumb>
-       <dashboard-title title="All Posts"></dashboard-title>
+       <dashboard-title title="All Posts"  button="Add a Page" post="1" modal-title="Add a Post"></dashboard-title>
         <el-table :data="posts"style="width: 100%">
             <el-table-column prop="title" label="Title"></el-table-column>
             <el-table-column prop="excerpt" label="Experct"></el-table-column>
