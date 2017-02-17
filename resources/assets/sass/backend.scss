@@ -60,6 +60,10 @@ a {
   min-height: 100vh;
   background: $primary-color;
 
+  .logo-div {
+    background: #fff;
+  }
+
   .navs {
     .el-menu {
       background: $primary-color;
@@ -109,6 +113,10 @@ a {
       float: left;
       padding: 11px;
       cursor: pointer;
+      i {
+        font-weight: normal !important;
+        color: $primary-color;
+      }
     }
 
     ul.right {
@@ -188,6 +196,28 @@ a {
 
 .el-dropdown-menu {
   margin-top: -8px;
+
+  text-transform: capitalize;
+
+  li {
+    padding: 0;
+
+  }
+
+  a {
+    color: $primary-color;
+    display: block;
+    padding: 5px 10px;
+
+    &:hover {
+      color: #fff;
+      background: $primary-color;
+    }
+  }
+
+  .img-wrap {
+    img {width: 20vw};
+  }
 }
 
 .label {
