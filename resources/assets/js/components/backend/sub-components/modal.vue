@@ -1,4 +1,5 @@
 <template>
+
   <div>
     <el-button class="el-button" type="text" v-if="buttonShow" @click="dialogVisible = true">{{ button }}</el-button>
     <el-dialog :title="header" v-model="dialogVisible" size="tiny">
@@ -17,6 +18,7 @@
      </span> -->
     </el-dialog>
 </div>
+
 </template>
 
 <script>

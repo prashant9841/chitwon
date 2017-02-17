@@ -11,6 +11,13 @@ Vue.use(VueRouter);
 require('vue-resource');
 
 require('element-ui');
+
+
+import ElementUI from 'element-ui'
+
+import locale from 'element-ui/lib/locale/lang/en'
+
+Vue.use(ElementUI, { locale })
 /**
  * We'll register a HTTP interceptor to attach the "CSRF" header to each of
  * the outgoing requests issued by this application. The CSRF middleware
@@ -61,9 +68,12 @@ const imageUpload = Vue.component('imgupload', require('./components/backend/sub
 const dashboardTitle = Vue.component('dashboard-title', require('./components/backend/sub-components/dashboardTitle.vue'));
 const breadCrumb = Vue.component('bread-crumb', require('./components/backend/sub-components/breadCrumb.vue'));
 const modal = Vue.component('modal', require('./components/backend/sub-components/modal.vue'));
+<<<<<<< HEAD
 const pageForm = Vue.component('page-form', require('./components/backend/sub-components/pageForm.vue'));
 const postForm = Vue.component('post-form', require('./components/backend/sub-components/postForm.vue'));
 const mediaForm = Vue.component('media-form', require('./components/backend/sub-components/mediaForm.vue'));
+=======
+>>>>>>> winter
 
 const router = new VueRouter({
     history:true,
@@ -77,7 +87,7 @@ const router = new VueRouter({
         { path: '/dashboard/pages', component: allPages},
         { path: '/dashboard/gallery', component: allMedia},
         { path: '/dashboard/options', component: event},
-        { path: '/dashboard/editor', component: editor},
+        { path: '/dashboard/editor', component: modal},
         { path: '/dashboard/login', component: loginForm},
         { path: '/dashboard/profile', component: profile},
         { path: '/dashboard/profile/settings', component: settings},
