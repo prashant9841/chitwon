@@ -1,7 +1,7 @@
 <template>
 <div class="">
     <bread-crumb :links="breadcrumb"></bread-crumb>
-    <dashboard-title title="All Images" button="Add image" link="/dashboard/gallery/add"></dashboard-title>
+    <dashboard-title title="All Images" button="Add image" media="1" modal-title="Add a Image"></dashboard-title>
     <el-table :data="galleries"style="width: 100%">
         <el-table-column prop="thumb" label="Thumbnail"></el-table-column>
         <el-table-column prop="file_name" label="File Name"></el-table-column>

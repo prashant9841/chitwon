@@ -60,7 +60,10 @@ const editor = Vue.component('editors', require('./components/backend/editor.vue
 const imageUpload = Vue.component('imgupload', require('./components/backend/sub-components/imageUpload.vue'));
 const dashboardTitle = Vue.component('dashboard-title', require('./components/backend/sub-components/dashboardTitle.vue'));
 const breadCrumb = Vue.component('bread-crumb', require('./components/backend/sub-components/breadCrumb.vue'));
-// const modal = Vue.component('modal', require('./components/backend/sub-components/modal.vue'));
+const modal = Vue.component('modal', require('./components/backend/sub-components/modal.vue'));
+const pageForm = Vue.component('page-form', require('./components/backend/sub-components/pageForm.vue'));
+const postForm = Vue.component('post-form', require('./components/backend/sub-components/postForm.vue'));
+const mediaForm = Vue.component('media-form', require('./components/backend/sub-components/mediaForm.vue'));
 
 const router = new VueRouter({
     history:true,
